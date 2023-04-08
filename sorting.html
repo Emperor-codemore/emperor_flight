@@ -16,10 +16,11 @@
  // read local JSON file in javascript
 fetch("https://emperor-codemore.github.io/emperor_api/countries.json")
   .then(response => response.json())
-  .then(json => {
-//for (let i = 0; i < json.length; i++){
+  .then(json => {show.innerHTML = json
+	
+/*for (let i = 0; i < json.length; i++){
 	show.innerText = json[i].name;
-	}
+	}*/
 })	
     
   
