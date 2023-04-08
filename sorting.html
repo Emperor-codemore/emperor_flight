@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort and Replace Nodes Anywhere By textContent Example</title>
+</head>
+<body>
+<div style="background-color:lightgrey">
+    <p id="show">3</p>
+</div>
+
+
+ <script type="text/javascript">
+ const show = document.getElementById("show");
+ 
+ // read local JSON file in javascript
+fetch("https://emperor-codemore.github.io/emperor_api/countries.json")
+  .then(response => response.json())
+  .then(json => {
+for (let i = 0; i < json.length; i++){
+	show.innerText = json[i],
+	}
+})	
+    
+  
+</script>
+</body>
+</html>
