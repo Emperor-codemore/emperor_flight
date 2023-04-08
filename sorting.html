@@ -17,7 +17,7 @@
 fetch("https://emperor-codemore.github.io/emperor_api/countries.json")
   .then(response => response.json())
   .then(json => {
-for (let i = 0; i < json.length; i++){
+//for (let i = 0; i < json.length; i++){
 	show.innerText = json[i].name;
 	}
 })	
