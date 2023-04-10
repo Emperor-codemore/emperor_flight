@@ -1,0 +1,406 @@
+.trip, .bag_num, .date, .sidenav{
+  height: 250px; /* 100% Full-height */
+  width: 65%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Stay on top */
+  top: 5%; /* Stay at the top */
+  left: 20%;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: none;
+  -moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+box-shadow: 12px 0 15px -4px #000000, -12px 0 15px -4px#000000;
+-moz-box-shadow: 12px 0 15px -4px #000000, -12px 0 15px -4px#E1EBEE;
+-webkit-box-shadow: 12px 0 15px -4px #000000, -12px 0 15px -4px#000000;
+}
+.date, .sidenav {
+	height: 100%;
+  width: 100%; 
+  border-radius: 0px;
+  top: 0; /* Stay at the top */
+  left: 0;
+	}
+
+.sidenav{
+	background-color: #F8F8F8;
+	}
+	
+.seperator  {
+	position: fixed;
+  height: 100%; /* 100% Full-height */
+  width: 100%; 
+  top: 0; /* Stay at the top */
+  left: 0;
+  z-index: 2; /* Stay on top */
+  background-color: grey; /* Black*/
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: none;
+  opacity: 50%;
+}
+
+.trip_in{
+	width: 100%;
+	height: 45px;
+	padding: 10px 10px
+	}
+	.right{
+		float:left;
+		color: black;
+		font-size: 17px;
+		font-weight: 450;
+		}
+		.left{
+		color: #1091AE;
+		font-size: 17px;
+		font-weight: 450;
+		float:right;
+		}
+		.line{
+			border: 0.08em solid lightgrey;
+			}
+			input[type=radio]{
+				width: 25px;
+	height: 25px;
+	margin-top: 25px;
+	
+				}
+				.trip_inner, .trip_inner1{
+					padding: 0px 10px;
+					}
+					.trip_inner1{
+						margin: 10px 0px;
+						margin-bottom: 30px;
+						}
+					label{
+						font-size: 20px;
+						}
+						.iterate, .value{
+							width: 25px;
+							height: 25px;
+							border: 2px solid grey;
+							background-color: white;
+							color: black;
+							font-size: 15px;
+							border-radius: 5px;
+							margin-top: -3px;
+							}
+							.value{
+								margin-top: -0px;
+								}
+								.times {
+									background-color: white;
+									font-size: 30px;
+									color: black;
+									border: none;
+									font-weight: 600;
+									}
+									.from{
+										width: 100%;
+							height: 45px;
+							border: 2px solid lightblue;
+							background-color: white;
+							color: black;
+							font-size: 15px;
+							border-radius: 5px;
+										}
+										#myInput, #myInputb {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL, #myULb {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a, #myULb li a{
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/* calendar starts here*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.calendarcontainer {
+  width: 90%;
+  height: 52rem;
+  background-color: grey;
+  color: #eee;
+  display: block;
+  margin: auto;
+   font-family: "Quicksand", sans-serif;
+   font-size: 62.5%;
+}
+
+.calendar {
+  width: 100%;
+  height: 100%;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 4rem;
+  padding: 0 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(98% / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(92% / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+}
+
+.today {
+  background-color: #167e56;
+}
+    
+    .prev, .next{
+    	color: white;
+    font-size: 25px;
+    font-weight: 700;
+    }
+    @media screen and (max-width: 600px) {
+    	.calendarcontainer {
+  width: 100%;
+  height: 48rem;
+  
+}
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(85% / 7);
+  height: 4rem;
+}
+    }
+    
+    .cabintype, .sign_in{
+    	font-size: 15px;
+    color: black;
+    padding: 10px;
+    margin: 15px 5px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    background-color: white;
+    }
+    
+    .cabintype:hover{
+    	border: 2px solid grey;
+    }
+    
+    .mySlides {display:none;}
+    
+    .sign_in{
+    	text-align: center;
+    font-weight: 500;
+    }
+    
+    .sign_in:hover{
+    	border: 2px solid grey;
+    
+    }
+    
+    .trip_innera{
+					width:70%;margin:auto;
+					}
+					@media screen and (max-width: 600px) {
+    	
+  .trip_innera{
+					width:90%;
+					}
+					.trip{
+						width: 90%;
+						margin: auto;
+						left: 5%;
+						}
+}
+
+.email{
+	width: 100%;
+	height: 45px;
+	border-radius: 5px;
+	border: 2px solid lightgrey;
+	padding: 0px 10px;
+	color: grey;
+	}
+	
+	.link1{
+		text-decoration: none;
+		}
+		
+		 .modify{
+	height: 95%;
+  width: 100%; 
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 5;
+  background-color: white; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: none;
+  border-radius: 18px 18px 0px 0px;
+	}
+
+ 
+ .divider  {
+	position: fixed;
+  height: 100%; /* 100% Full-height */
+  width: 100%; 
+  top: 0; /* Stay at the top */
+  left: 0;
+  z-index: 2; /* Stay on top */
+  background-color: grey; /* Black*/
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: none;
+  opacity: 50%;
+}
+
+input[type=checkbox]{
+	height: 23px; 
+  width: 23px; 
+  margin: 10px 6px;
+	}
+	
+	.general{
+		margin: 10px 5px;
+		width: 100%;
+		font-size: 15px;
+		}
+		
+		.labeltouch{
+			font-size: 18px;
+			padding: 10px 0px;
+			font-family: "Quicksand", sans-serif;
+			}
+			.address{
+ 	width:100%; 
+background-color: #192024;
+padding: 15px 20px;
+text-align: center;
+ }
+ 
+  .btn7{
+ 	width:100%; 
+height:40px;
+border-radius: 10px;
+background-color:white; 
+border: none;
+color: black;
+font-weight: 500;
+padding: 2px 15px;
+text-align: left;
+ }
+ 
+ .links, .note1{
+ 	color: white;
+ font-size: 11px;
+ margin-top: 15px;
+ line-height: 1.9em;
+ }
+ 
+ .links{
+ 	margin: 15px;
+ }
+ 
+ .linkcontainer{
+ 	margin: 35px 0px;
+ }
+ 
+ 
+  .links:hover {
+ 	cursor: pointer;
+ 
+ }
