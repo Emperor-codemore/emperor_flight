@@ -1,0 +1,1330 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<title>waves flight</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WAVES help you find cheap airfare and book a flight that suits you best. You can find cheap tickets from cheap airlines quickly.">
+<meta name="keyword" content="flight, tickets, board, waves">
+	<link rel="stylesheet" type="text/css" href="flight.css" >
+	<script src="calendar.js"></script>
+	<style>
+		* {
+  box-sizing: border-box;
+}
+		body{
+			background-color: lightgrey;
+			margin: 0px;
+			}
+/* Hamburger menu icon */
+.bar{
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+.bar1 {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+	border-radius: 8px;
+	display: block;
+	transition: 0.3s;
+	}
+	.bar1:hover {
+	cursor: pointer;
+	}
+
+.bar2 {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+	border-radius: 8px;
+	float: left;
+	transition: 0.3s;
+	margin: 2px 8px;
+	display: none;
+	}
+	
+	.bar2:hover {
+	cursor: pointer;
+	}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+.content{
+	background-color: white;
+	width: 93%;
+	float: right;
+	transition: 0.5s;
+	}
+	
+	.nav{
+	background-color: #F8F8F8;
+	height: 3855px;
+	width: 7%;
+	float: left;
+	transition: 0.5s;
+	}
+	
+	.topnav {
+		height: 50px;
+	width: 100%;
+	border-bottom:1px solid lightgrey;
+	padding:12px;
+		}
+		
+		.sidenavlink img{
+			width: 25px;
+			height: 25px;
+			margin: 0px 10px;
+			}
+			
+			.sidenavlink {
+			width: 100%;
+			height: 35px;
+			display: block;
+			margin-top: 15px;
+			font-size: 13px;
+			color: #575550;
+			padding: 8px 0px;
+			}
+			
+			.sidenavlink:hover {
+	border-left: #07244B 2px solid;
+  color: grey;
+  font-weight: 700;
+}
+			
+		.cont {
+		height: 50px;
+	width: 100%;
+	border-bottom:1px solid lightgrey;
+	padding:11px;
+		}
+
+	.topnavlogo, .topnavlogo1 {
+		height: 30;
+	width: 30px;
+	padding: 5px;
+	background-color: #07244B;
+	font-weight: 650;
+	font-size: 15px;
+	color: white;
+		}
+		
+		.topnavdetail {
+		height: 40px;
+	width: 100px;
+	padding: 5px;
+	float: right;
+		}
+		
+		.cont2{
+			width: 80%;
+			margin:auto;
+			padding: 40px 0px;
+			}
+			
+
+	.btn{
+		width:20%;
+		height: 40px;
+		border: 2px solid #E1EBEE;
+		border-radius:5px;
+		background-color: white;
+		}
+		
+		.btn1, .btn2, .btn3, .btn4, .btn5{
+		width:100%;
+		height: 45px;
+		background-color: #E1EBEE;
+		border-radius:8px;
+		border: none; 
+		color: #575550;
+		margin-top: 5px;
+		text-align: left;
+	padding: 5px 15px;
+		}
+		
+		.btn1{
+		border-radius:8px 8px 0px 0px;
+		margin-top: 7px;
+		}
+		
+		.btn2{
+		border-radius:0px 0px 8px 8px;
+		margin-top: 4px;
+		}
+		
+		.btn5{
+		background-color: #07244B;
+		margin-top: 10px;
+		margin-bottom: 29px;
+		color: white;
+		font-weight: 700;
+		text-align: center;
+		}
+		
+		.btn_group {
+			position: relative;
+			}
+			
+		.swap{
+			position: absolute;
+			border-radius:8px;
+			width:35px;
+		height: 35px;
+		float: right;
+		right: 31;
+		margin-top: -17px;
+		background-color:white;
+		font-size: 20px;
+		font-weight: 750;
+		padding: 4px;
+		text-align: center;
+		cursor: pointer;
+			}
+			
+			.des{
+				margin-top: 15px;
+				}
+				
+			.deshead{
+				font-size: 20px;
+				font-weight: 700;
+				color: black;
+				}
+				
+				.descom{
+					font-size: 15px;
+				color: black;
+				display: block;
+				margin-top: 5px;
+					}
+					
+					.outer {background-color:white;
+overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.outer > * {
+  display:inline-block;
+  background-color: white; 
+  vertical-align:middle;
+}
+
+.two {width:270px; 
+height:370px;
+border-radius: 15px;
+overflow-x: hidden;
+margin: 0px 6px;
+}
+
+.two img {
+border-radius:15px;
+}
+
+ .go{
+ 	width:100%; 
+height:40px;
+border-radius: 10px;
+background-color:darkgrey; 
+border: none;
+color: white;
+font-weight: 700;
+ }
+ 
+ .explore{
+ 	border-radius: 15px;
+ height: 350px;
+ background-color: white; 
+ }
+ 
+ .explore img{
+ 	border-radius: 15px;
+ }
+ 
+ 
+ .container {
+ 	width: 100%;
+ height: 4100px;
+ display: block;
+ background-color: blue;
+ box-sizing: border-box;
+ }
+ .nav_content{
+ 	width: 90%;
+ height: 35px;
+ background-color: #F8F8F8;
+ margin: auto;
+ margin-top: 10px;
+ }
+ 
+ .impt{
+ 	width: 100%;
+ height: 35px;
+ background-color: #F8F8F8;
+ float:left;
+ transition: 0.1s;
+ padding: 4px;
+ }
+ 
+  .impt img{
+ 	width:60%;height:90%; margin:auto;
+ }
+ 
+ .plusim{
+ 	width: 65%;
+ height: 35px;
+ background-color: #F8F8F8;
+ display: none;
+ float: right;
+ color: #575550;
+ }
+ 
+ .waves {
+ 	float: right;
+ margin-top: 5px;
+ margin-right: 5px;
+ }
+ 
+  @media screen and (max-width: 600px) {
+  .cont2{
+			width: 90%;
+			margin:auto;
+			padding: 40px 0px;
+			}
+			.content{
+							width: 100%;
+							display: block;
+							float: none;
+							}
+							.nav {
+						display:none;
+						width: 0%;
+						}
+						
+						.btn{
+							width: 25%;
+							}
+							.topnavlogo{
+								float: left;
+								margin-top: 0px;
+								width: 60px;
+								
+								}
+								
+								.bar2 {
+	display: block;
+	}
+							
+}
+
+
+	</style>
+</head>
+<body>
+	 <!-- container bar-->
+		<div class="seperator" id="sep"></div>
+	<div class="container">
+	                  
+	 <!-- naval bar-->
+<!-- Use any element to open the sidenav -->
+<!-- hamburger and header -->
+<div class="nav" id="navlist">
+
+<div class="cont">
+<span class="bar1" id="ba" onclick="openNav()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</span>
+</div>
+
+<!-- naval bar content item starts here-->
+<div class="nav_content" id="navct">
+<div class="impt" id="impt">
+	<img src="image.flight/plane.png" alt="plane">
+</div>
+<div class="plusim" id="plusim">Flights
+</div>
+</div>
+
+<div class="nav_content" id="navct">
+<div class="impt" id="impta">
+	<img src="image.flight/nav_car.png" alt="plane">
+</div>
+<div class="plusim" id="plusima">Cars
+</div>
+</div>
+
+<div class="nav_content" id="navct">
+<div class="impt" id="imptb">
+	<img src="image.flight/nav_bed.png" alt="plane">
+</div>
+<div class="plusim" id="plusimb">Stays
+</div>
+</div>
+
+<div class="nav_content" id="navct">
+<div class="impt" id="imptc">
+	<img src="image.flight/nav_camera.png" alt="camera">
+</div>
+<div class="plusim" id="plusimc">Things to do
+</div>
+</div>
+
+<div class="nav_content" id="navct">
+<div class="impt" id="imptd">
+	<img src="image.flight/nav_guide.png" alt="guide">
+</div>
+<div class="plusim" id="plusimd">Guide
+</div>
+</div>
+
+<div class="nav_content" id="navct">
+<div class="impt" id="impte">
+	<img src="image.flight/nav_explore.png" alt="explore">
+</div>
+<div class="plusim" id="plusime">Explore
+</div>
+</div>
+<!-- naval bar content item ends here-->
+</div>
+<!-- naval bar ends here -->
+	
+	
+	
+	<!-- content section starts here -->
+	<div class="content" id="main">
+		
+<!-- top naval bar starts here -->
+<div class="topnav" id="part">
+<span class="bar2" id="ba2" onclick="openSideNav()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</span>
+
+<div class="sidenav" id="mySideNav">
+		<div class="trip_inner">
+		<button class="times" onclick="closeSideNav()">&times;</button>
+	</div>
+<hr class="line">
+<div class="trip_inner">
+	
+	<a class="sidenavlink">
+	<img src="image.flight/plane.png" alt="plane">Flights
+</a>
+		
+<a class="sidenavlink">
+	<img src="image.flight/nav_car.png" alt="plane">Cars
+</a>
+
+<a class="sidenavlink">
+	<img src="image.flight/nav_bed.png" alt="plane">Stays
+</a>
+
+<a class="sidenavlink">
+	<img src="image.flight/nav_camera.png" alt="camera">Things to do
+</a>
+
+<a class="sidenavlink">
+	<img src="image.flight/nav_guide.png" alt="guide">Guide
+</a>
+
+<a class="sidenavlink">
+	<img src="image.flight/nav_explore.png" alt="explore">Explore
+</a>
+<!-- Sidenav content ends here -->
+</div>
+<div class="trip_inner">
+	<hr class="line" style="margin:30px 0px;">
+		<a class="sidenavlink">
+	Trips
+</a>
+		
+		<a class="sidenavlink">
+	About
+</a>
+
+<a class="sidenavlink">
+	Contact
+</a>
+	</div>
+</div>
+
+<span class="topnavlogo">WAVES</span>
+<span class="topnavdetail">
+<img src="image.flight/top4.png" style="width:30%;height:100%;margin-right:15px;">
+
+<span onclick="openProfile()">
+<img src="image.flight/top3.png" style="width:30%;height:100%;margin-right:10px;"></span>
+
+</span>
+</div>
+<div class="date" id="myProfile">
+		<div class="trip_inner">
+		<button class="times" onclick="closeProfile()">&times;</button>
+ <span class="waves">
+		<span class="topnavlogo1">W</span>
+		<span class="topnavlogo1">A</span>
+		<span class="topnavlogo1">V</span>
+		<span class="topnavlogo1">E</span>
+		<span class="topnavlogo1">S</span>
+		</span>
+	</div>
+<hr class="line">
+<div class="trip_innera">
+		<h2 class="times" style="margin-top:30px;font-size: 20px;">Sign in to see more</h2>
+		<br>
+			<span>Get access to member-only deals, price alerts and more</span>
+</div>
+<div class="trip_innera">
+		<p class="sign_in">Continue with Google</p>
+		<p class="sign_in" onclick="openEmail()">Continue with email</p>
+		<p class="sign_in">Continue with Facebook</p> 
+		<a href="https://account.booking.com/sign-in?op_token=EgVvYXV0aCKWAQoURXNqQnAxM09VQlZ3VVFjRGFiUGsSCWF1dGhvcml6ZRokaHR0cHM6Ly93d3cua2F5YWsuY29tL3NpZ25pbi1ib29raW5nIhplbWFpbCBwcm9maWxlIGxpbmtfYWNjb3VudCorNEpDX19Na1A1eE1kZEFDX0llUG5qZ1NEeGVzeWNGVGthTDJPRkxxQllnTUIEY29kZSoSMPe5t6fY2iU6AEIAWNjW4ZYG" class="link1"><p class="sign_in">Continue with Booking.com</p></a>
+		<p class="sign_in">Continue with Apple</p>
+		<span>By signing in you accept our Terms of use and Privacy policy</span>
+</div>
+</div>
+
+<div class="date" id="myEmail">
+		<div class="trip_inner">
+		<button class="times" onclick="closeEmail()">&lt;</button>
+	</div>
+
+<div class="trip_innera">
+		<h2 class="times" style="margin-top:30px;font-size: 20px;">What's your email address?</h2>
+		<br>
+</div>
+<div class="trip_innera">
+		<input class="email" type="email" placeholder="Email address">
+			<br> 
+			<button class="btn5">Continue</button>
+		
+		<span>By signing in you accept our Terms of use and Privacy policy</span>
+</div>
+</div>
+
+	<!-- top naval bar ends here -->
+	
+	  <!-- trip option starts here-->
+<div class="cont2">
+	<button class="btn" id="way" onclick="trip()">One way &#8964</button>
+	<div class="trip" id="mytrip">
+<div class="trip_in">
+<span class="right">Trip Type</span>
+<span class="left" onclick="closeTrip()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+<form class="btn-group" data-toggle="buttons">
+<input type="radio" id="oneway" name="trip" value="One way">
+<label for="oneway">One-way</label><br>
+<input type="radio" id="round" name="trip" value="Round-trip">
+<label for="round">Round-trip</label><br>
+<input type="radio" id="tour" name="trip" value="Multi-city">
+<label for="tour">Multi-city</label>
+</form>
+</div>
+</div>
+  <!-- trip option starts here-->
+	
+	  <!-- № bags option starts here-->
+	<button class="btn" onclick="bagNum()"><span id="showc">0</span> bags &#8964</button>
+	<br>
+		<div class="trip" id="mybagnum">
+<div class="trip_in">
+<span class="right">Baggage</span>
+<span class="left" onclick="closeBagNo()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner1">
+		<span>Carry-on bag</span>
+		<span class="left" >
+<button class="iterate" id="deca">-</button>
+<button class="value" id="showa">0</button>
+<button class="iterate" id="inca">+</button></span>
+</div>
+<div class="trip_inner1">
+		<span>Checked bag</span>
+		<span class="left" >
+<button class="iterate" id="decb">-</button>
+<button class="value" id="showb">0</button>
+<button class="iterate" id="incb">+</button></span>
+</div> 
+<hr class="line">
+	<div class="trip_inner">
+		<button class="btn5" id="totalbags">Save</button> 
+</div>
+</div>
+		  <!-- № bags option ends here-->
+			
+			 <!-- From option starts here-->
+		<div class="btn_group">
+	<button class="btn1" id="btna" onclick="openFrom()">From</button>
+	
+	<div class="trip" id="myFrom">
+		<div class="trip_inner">
+		<button class="times" onclick="closeFrom()">&times;</button> 
+		<span class="times">From Where?</span>
+</div>
+<div class="trip_inner">
+		<input class="from" type="text" onkeyup="myFunction()" id="myInput" placeholder="Enter a City, Airport or Place">
+</div>
+<div class="trip_inner">
+		<ul id="myUL" class="btn-group">
+ <li><a href="#">Afghanistan</a></li>
+ <li><a href="#">Algeria</a></li>
+ <li><a href="#">Angola</a></li>
+ <li><a href="#">Anguilla</a></li>
+ <li><a href="#">America</a></li>
+  <li><a href="#">Andorra</a></li>
+
+  <li><a href="#">Bahamas</a></li>
+  <li><a href="#">Bangladesh</a></li>
+<li><a href="#">Belgium</a></li>
+  <li><a href="#">Canada</a></li>
+
+  <li><a href="#">Cameroon</a></li>
+  <li><a href="#">Cape Verde</a></li>
+  <li><a href="#">China</a></li>
+  <li><a href="#">Chile</a></li>
+  
+  <li><a href="#">England</a></li>
+</ul>
+</div>
+</div>
+<br><!-- From option ends here-->
+	
+	
+<span class="swap" onclick="swap()">&#8595&#8593;</span>
+
+
+<!-- To option starts here-->
+	<button class="btn2" id="btnb" onclick="openTo()">To</button> 
+	<br>
+		<div class="trip" id="myTo">
+		<div class="trip_inner">
+		<button class="times" onclick="closeTo()">&times;</button> 
+		<span class="times">To Where?</span>
+</div>
+<div class="trip_inner">
+			<input class="from" type="text" onkeyup="myDestination()" id="myInputb" placeholder="Enter a City, Airport or Place">
+</div>
+<div class="trip_inner">
+		<ul id="myULb" class="destination">
+ <li><a href="#">Afghanistan</a></li>
+ <li><a href="#">Algeria</a></li>
+ <li><a href="#">Angola</a></li>
+ <li><a href="#">Anguilla</a></li>
+ <li><a href="#">America</a></li>
+  <li><a href="#">Andorra</a></li>
+
+  <li><a href="#">Bahamas</a></li>
+  <li><a href="#">Bangladesh</a></li>
+<li><a href="#">Belgium</a></li>
+  <li><a href="#">Canada</a></li>
+
+  <li><a href="#">Cameroon</a></li>
+  <li><a href="#">Cape Verde</a></li>
+  <li><a href="#">China</a></li>
+  <li><a href="#">Chile</a></li>
+  
+  <li><a href="#">England</a></li>
+</ul>
+</div>
+<br><!-- To option ends here-->
+</div>
+
+<!-- Date option starts here-->
+	<button class="btn3" onclick="openDate()">date</button>
+	
+	<div class="date" id="myDate">
+		<div class="trip_inner">
+		<button class="times" onclick="closeDate()">&times;</button> 
+		<span class="times">When</span>
+</div>
+<div class="trip_inner">
+		
+		<div class="calendarcontainer">
+      <div class="calendar">
+        <div class="month">
+          <i class="prev">&lt;</i>
+          <div class="clock">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="next">&gt;</i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+    
+    	
+</div>
+</div>
+	<br>
+		<!-- Date option ends here-->
+			
+			<!-- Traveller option starts here-->
+	<button class="btn4" onclick="openTravel()" id="cabin">1 traveller, Economy</button> 
+	
+	<div class="date" id="myTravel">
+		<div class="trip_inner">
+		<button class="times" onclick="closeTravel()">&times;</button> 
+	</div>
+<hr class="line">
+<div class="trip_inner">
+		<span class="times">Cabin Type</span>
+</div>
+<div class="trip_inner">
+		<p class="cabintype">Economy</p>
+		<p class="cabintype">Premium Economy</p>
+		<p class="cabintype">Business</p> 
+		<p class="cabintype">First</p>
+</div>
+
+</div>
+	<br>
+		<!-- Traveller option ends here-->
+		<button class="btn5">Search</button> 
+	<br>
+		
+			
+			
+		  <!-- Other destinations-->
+	<div class="des">
+<span class="deshead">Destinations you can travel to now</span> <br>
+	<span class="descom">Popular destinations open to most visitors from Nigeria</span> <br>
+</div> 
+	  <!-- Other destinations options -->
+	    <div class="flow1" id="myFlow">
+<div class="outer">
+<div class="two"><img src="image.flight/vietnam.jpeg" style="width:100%;height:250;object-fit: cover;">
+<div class="des">
+<span class="deshead">Vietnam</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/canada.jpeg" style="width:100%;height:250px;object-fit: cover;object-position: 100% 75%;">
+<div class="des">
+<span class="deshead">Canada</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/belgium.jpeg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Belgium</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/america.jpeg" alt="America" style="width:100%;height:250px;">
+<div class="des">
+<span class="deshead">American</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/germany.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Germany</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/england.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">England</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/india.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">India</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/australia.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Australia</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/spain.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Spain</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/mexico.jpeg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Mexico</span> <br>
+	<span class="">Vaccinated travellers can visit</span> <br>
+		<span class="descom">Mask required</span> <br>
+</div> 
+</div>
+
+</div>
+</div><!-- flow1 content ends here -->
+	
+	  <!-- Preparation-->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Prep for pride 2022</span> <br>
+	<span class="descom">Get our tips for an epic event</span> <br>
+</div> 
+	  <!-- Other destinations options -->
+	    <div class="flow1" id="myFlow">
+<div class="outer">
+<div class="two"><img src="image.flight/summer1.jpg" style="width:100%;height:250;object-fit: cover;">
+<div class="des">
+<span class="deshead">Our pride guide</span> <br>
+	<span class="">Plus travel tips</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="images.png/car.png" style="width:100%;height:250px;object-fit: cover;object-position: 100% 75%;">
+<div class="des">
+<span class="deshead">Safe travels</span> <br>
+	<span class="">Get tip advice</span> <br>
+</div> 
+</div>
+
+
+<div class="two"><img src="image.flight/summer2.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Stay relaxed</span> <br>
+	<span class="">Get comfort</span> <br>
+</div> 
+</div>
+
+</div>
+</div><!-- flow1 content ends here -->
+	
+	<!-- explore starts here -->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Explore</span> <br>
+<div class="explore"><img src="image.flight/explore.png" style="width:100%;height:100%;object-fit: cover;"></div> 
+	
+	<span class="descom">See yourself tour the world</span> <br>
+		<button class="go">Let's go</button>
+</div> 
+<!-- explore ends here -->
+	
+	
+	  <!-- weddin guide-->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Your go-to wedding guide </span> <br>
+	<span class="descom">Get advice for wedding season</span> <br>
+</div> 
+	  <!-- Other wedding  options -->
+	    <div class="flow1" id="myFlow">
+<div class="outer">
+<div class="two"><img src="images.png/lmb.jpg" style="width:100%;height:250;object-fit: cover;">
+<div class="des">
+<span class="deshead">For newly Weds </span> <br>
+	<span class="">See the spots</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="images.png/car.png" style="width:100%;height:250px;object-fit: cover;object-position: 100% 75%;">
+<div class="des">
+<span class="deshead">Tools for wed</span> <br>
+	<span class="">Get tip advice</span> <br>
+</div> 
+</div>
+
+
+<div class="two"><img src="images.png/olam.jpeg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Honey moon</span> <br>
+	<span class="">Get satisfaction</span> <br>
+</div> 
+</div>
+
+</div>
+</div><!-- flow1 content ends here -->
+	
+	
+	  <!-- summer travel-->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Reclaim summer travel </span> <br>
+	<span class="descom">'Tis the season to book flight</span> <br>
+</div> 
+	  <!-- Other destinations options -->
+	    <div class="flow1" id="myFlow">
+<div class="outer">
+<div class="two"><img src="images.png/lmb.jpg" style="width:100%;height:250;object-fit: cover;">
+<div class="des">
+<span class="deshead">Our pride guide</span> <br>
+	<span class="">Plus travel tips</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="images.png/car.png" style="width:100%;height:250px;object-fit: cover;object-position: 100% 75%;">
+<div class="des">
+<span class="deshead">Safe travels</span> <br>
+	<span class="">Get tip advice</span> <br>
+</div> 
+</div>
+
+
+<div class="two"><img src="images.png/olam.jpeg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">Stay relaxed</span> <br>
+	<span class="">Get comfort</span> <br>
+</div> 
+</div>
+
+</div>
+</div><!-- flow1 content ends here -->
+	
+	
+	  <!-- popular cities-->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Top 8 popular cities</span> <br>
+	<span class="descom">See what's popular with other travellers</span> <br>
+</div> 
+	  <!-- Other destinations options -->
+	    <div class="flow1" id="myFlow">
+<div class="outer">
+<div class="two"><img src="image.flight/city1.jpg" style="width:100%;height:250;object-fit: cover;">
+<div class="des">
+<span class="deshead">London</span> <br>
+	<span class="">Round-trip from $23</span> <br>
+</div> 
+</div>
+
+<div class="two"><img src="image.flight/city2.jpg" style="width:100%;height:250px;object-fit: cover;object-position: 100% 75%;">
+<div class="des">
+<span class="deshead">Los Angeles, LA </span> <br>
+	<span class="">Round-trip from $23</span> <br>
+</div> 
+</div>
+
+
+<div class="two"><img src="image.flight/city3.jpg" style="width:100%;height:250px;object-fit: cover;">
+<div class="des">
+<span class="deshead">New York, NY</span> <br>
+	<span class="">Round-trip from $23</span> <br>
+</div> 
+</div>
+
+</div>
+</div><!-- flow1 content ends here -->
+	
+	
+	<!-- explore starts here -->
+	<div class="des" style="margin-top:35px;">
+<span class="descom">Tools</span> <br>
+<span class="deshead">Track the status of a flight</span> <br>
+<div class="explore">
+	<img src="image.flight/airplane.png" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+	<img src="image.flight/airplane1.png" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+<img src="image.flight/airplane2.png" class="mySlides" style="width:100%;height:100%;object-fit: cover;"></div> 
+	
+		<button class="go" style="margin-top: 15px;">Open flight tracker</button>
+</div> 
+<!-- explore ends here -->
+	
+	<!-- about flight starts here -->
+	<div class="des" style="margin-top:35px;">
+<span class="deshead">Search cheap flight by destination</span> <br>
+	<span class="descom">Find cheap flight</span> <br>
+<p class="note">
+Save money on airfare by searching for cheap flight tickets on WAVES. WAVES searches for flight deals on hundreds of airline tickets sites to help you find the cheapest flights. Whether you are looking for a last minute flight or a cheap plane ticket for a later date, you can find the best deals faster at WAVES.
+</p> 
+</div> 
+</div>
+
+	
+	
+</div>
+	<!-- content section ends here -->
+  
+</div>
+<!-- container section ends here -->
+	
+	
+	
+	<!-- contact section starts here -->
+	<div class="address">
+		<button class="btn7" style="margin-top: 55px;">United States (English)</button>
+		<button class="btn7" style="margin-top: 15px;">United States Dollar</button>
+		
+		<div class="linkcontainer">
+	<a class="links">Terms and Condition</a>
+	<a class="links">Flight Tracker</a>
+	<a class="links">About</a>
+	<a class="links">Privacy</a>
+	<a class="links">Help</a>
+	<a class="links">© 2022 Flight</a>
+	</div>
+		
+		<p class="note1">
+			Search cheap flights with WAVES. Search for the cheapest airline tickets for all the top airlines around the world and the top international flight routes. WAVES searches hundreds of travel sites to help you find cheap airfare and book a flight that suits you best. Since WAVES searches many plane tickets sites at once, you can find cheap tickets from cheap airlines quickly.
+</p>
+</div> 
+	<!-- contact section ends here -->
+		
+<script>
+/* Open and close side nav*/
+function openNav() {
+	var x,y,v,w,m,n,o,p,q,r,s,t,a,b;
+	 v = document.getElementById("impt");
+	 w = document.getElementById("plusim");
+	 m = document.getElementById("impta");
+	 n = document.getElementById("plusima");
+	o = document.getElementById("imptb");
+	 p = document.getElementById("plusimb");
+	q = document.getElementById("imptc");
+	 r = document.getElementById("plusimc");
+	s = document.getElementById("imptd");
+	 t = document.getElementById("plusimd");
+	a = document.getElementById("impte");
+	 b = document.getElementById("plusime");
+	
+	 x = document.getElementById("navlist");
+	 y = document.getElementById("main");
+	if (x.style.width === "7%"){
+  y.style.width = "70%";
+  x.style.width = "30%";
+  w.style.display = "block";
+  v.style.width = "30%";
+  n.style.display = "block";
+  m.style.width = "30%";
+  p.style.display = "block";
+  o.style.width = "30%";
+  r.style.display = "block";
+  q.style.width = "30%";
+  t.style.display = "block";
+  s.style.width = "30%";
+  b.style.display = "block";
+  a.style.width = "30%";
+} else {
+  	y.style.width = "93%";
+  x.style.width = "7%";
+  w.style.display = "none";
+  v.style.width = "100%";
+  n.style.display = "none";
+  m.style.width = "100%";
+  p.style.display = "none";
+  o.style.width = "100%";
+  r.style.display = "none";
+  q.style.width = "100%";
+  t.style.display = "none";
+  s.style.width = "100%";
+  b.style.display = "none";
+  a.style.width = "100%";
+};
+}
+
+function swap() {
+  var x = document.getElementById("btna");
+  var y = document.getElementById("btnb");
+  if (x.innerHTML === "From") {
+    x.innerHTML = "To";
+    y.innerHTML = "From";
+  } else {
+    x.innerHTML = "From";
+    y.innerHTML = "To";
+  }
+}
+
+if (document.getElementById("navlist").style.display === "none"){
+	document.getElementById("main").style.width = "100%";
+	};
+
+
+function trip(){
+	var x = document.getElementById("mytrip");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeTrip(){
+	var x = document.getElementById("mytrip");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function bagNum(){
+		var x = document.getElementById("mybagnum");
+		var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+		}
+		function closeBagNo(){
+		var x = document.getElementById("mybagnum");
+		var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+		}
+		
+		    // Get a reference to the result area element
+let results = document.getElementById("way");
+
+// Set up a click handler on the parent of the radio buttons so that
+// any clicks to the descendants will bubble up to the parent
+document.querySelector("form.btn-group").addEventListener("click", function(evt){
+  // Check if a radio button triggered the event
+  if(evt.target.type === "radio"){
+    // Populate the results area with the value of the clicked element
+    results.textContent = evt.target.value;
+    document.getElementById("sep").style.display = "none";
+    document.getElementById("mytrip").style.display ="none";
+  }
+});
+  
+  function openFrom(){
+	var x = document.getElementById("myFrom");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeFrom(){
+	var x = document.getElementById("myFrom");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openTo(){
+	var x = document.getElementById("myTo");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeTo(){
+	var x = document.getElementById("myTo");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openDate(){
+	var x = document.getElementById("myDate");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeDate(){
+	var x = document.getElementById("myDate");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openTravel(){
+	var x = document.getElementById("myTravel");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeTravel(){
+	var x = document.getElementById("myTravel");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openProfile(){
+	var x = document.getElementById("myProfile");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeProfile(){
+	var x = document.getElementById("myProfile");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openEmail(){
+	var x = document.getElementById("myEmail");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeEmail(){
+	var x = document.getElementById("myEmail");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openSideNav(){
+	var x = document.getElementById("mySideNav");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeSideNav(){
+	var x = document.getElementById("mySideNav");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+function myFunction() {
+  // Declare variables
+  const ul = document.querySelectorAll('.btn-group li');
+  var input, filter, a, i, txtValue, result;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  result = document.getElementById('btna');
+  
+    for (let i = 0; i <= ul.length - 1; i++) {
+	a = ul[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    console.log(txtValue);
+    ul[i].addEventListener("click", function(evt){
+  result.innerHTML = this.innerText;
+  closeFrom();
+});
+	if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      ul[i].style.display = "";
+    } else {
+      ul[i].style.display = "none";
+    }
+    }
+    }
+    
+    
+    function myDestination() {
+  // Declare variables
+  const ul = document.querySelectorAll('.destination li');
+  var input, filter, a, i, txtValue, result;
+  input = document.getElementById('myInputb');
+  filter = input.value.toUpperCase();
+  result = document.getElementById('btnb');
+  
+    for (let i = 0; i <= ul.length - 1; i++) {
+	a = ul[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    console.log(txtValue);
+    ul[i].addEventListener("click", function(evt){
+  result.innerHTML = this.innerText;
+  closeTo();
+});
+	if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      ul[i].style.display = "";
+    } else {
+      ul[i].style.display = "none";
+    }
+    }
+    }
+    
+    
+    const cabinType = document.querySelectorAll('.cabintype');
+    var cabin = document.getElementById('cabin');
+    for (let i = 0; i <= cabinType.length - 1; i++) {
+    	b = cabinType[i];
+    b.addEventListener("click", function(evt){
+  console.log('it worked');
+  cabin.innerHTML = "1 traveller,"+ " " +this.innerText;
+  var x = document.getElementById("myTravel");
+  closeTravel();
+});
+}
+    
+    
+    var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+const inca = document.getElementById('inca');
+const incb = document.getElementById('incb');
+const deca = document.getElementById('deca');
+const decb = document.getElementById('decb');
+const showa = document.getElementById('showa');
+const showb = document.getElementById('showb');
+const total = document.getElementById('totalbags');
+const showc = document.getElementById('showc');
+var suma = 0;
+var sumb = 0;
+
+inca.onclick = () => {
+	if (suma == 2) {
+	return}
+	suma++
+	showa.innerText = suma
+	}
+	
+	deca.onclick = () => {
+	if (suma == 0) {
+	return}
+	suma--
+	showa.innerText = suma
+	}
+	
+	incb.onclick = () => {
+	if (sumb == 2) {
+	return}
+	sumb++
+	showb.innerText = sumb
+	}
+	
+	decb.onclick = () => {
+	if (sumb == 0) {
+	return}
+	sumb--
+	showb.innerText = sumb
+	}
+	
+	total.onclick = () => {
+	showc.innerText = suma + sumb
+	closeBagNo()
+	}
+</script>
+</body>
+</html>
