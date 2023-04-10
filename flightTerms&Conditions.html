@@ -1,0 +1,483 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<title>flightbooking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" language="javascript" src="jQuery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="flight.css">
+	
+	<style>
+		* {box-sizing:border-box}
+		body{
+			background-color: white;
+			margin: 0px;
+			}
+/* The side navigation menu */
+.sidenavi {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #F8F8F8; /* grey*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenavi a {
+  padding: 8px 8px 8px 32px;
+  margin-left: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #575550;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavi a:hover {
+	border-left: #07244B 2px solid;
+  color: grey;
+  font-weight: 700;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenavi .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Hamburger menu icon */
+.bar1, .bar2, .bar3 {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  Padding: 0px;
+}
+.bar {
+	width: 22px;
+	margin-top: 7px;
+	margin-right: 15px;
+	padding-top: 5px;
+	display: block;
+	float: left;
+	}
+	
+	.waves1{
+		color: white;float:left;display: block;margin:10px;font-family: Sans-serif;
+		background-color: #07244B;
+		padding: 2px 4px;
+		font-size: 15px;
+		}
+		
+		
+/* style main*/
+.main{
+	background-color: white;
+	height: 45px;
+	padding-top: 3px;
+	padding-left: 15px;
+	overflow: hidden;
+	border-bottom: 1px solid #E1EBEE;
+	}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Style the submit button */
+.hero{
+	height: 400px;
+	width: 100%;
+	background-color: grey;
+	}
+	
+	.chargescontent{
+		width: 70%;
+		margin: auto;
+		padding: 40px 0px;
+		}
+		
+		.charges{
+			width: 100%;
+			height: 250px;
+			border-radius: 8px;
+	border: 2px solid #E1EBEE;
+	margin-top: 15px;
+	box-shadow: 0 2px 5px 0 #E1EBEE; 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+			}
+		
+			.terms{
+				font-size: 18px;
+			font-weight: 300;
+			color: black;
+			line-height: 1.5em;
+				}
+				
+				.terms-heading{
+					color: black;
+					margin: 25px 0px;
+					}
+			
+		
+@media screen and (max-width: 600px) {
+	  .hero{
+	height: 200px;
+	}
+   	.chargescontent{
+		width: 90%;
+		} 
+		
+	
+	.charges{
+			height: 200px;
+			}
+			
+   }
+
+	</style>
+</head>
+<body>
+	                   <!-- naval bar-->
+<div id="mySidenav" class="sidenavi">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#hotels">Hotel</a>
+  <a href="#flight">Flight</a>
+  <a href="#cars">Rental cars</a>
+  <a href="#about">About</a>
+  <a href="#achieve">Achievement</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<!-- Use any element to open the sidenav -->
+<!-- hamburger and header -->
+<div class="main">
+<span onclick="openNav()"> <div class="bar">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+</div></span>
+<h3 class="waves1">WAVES</h3>
+
+ <span onclick="openSearch()">
+ <div class="search"><i class="fa fa-search"></i></div></span>
+</div>
+
+<!-- Man owar logo -->
+ <div class="hero" id="home">
+ 	<img src="image.flight/welcome.png" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+	<img src="image.flight/flightbook1.jpeg" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+<img src="image.flight/flightbook2.jpeg" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+</div>
+
+<!-- flight review -->
+	<div class="chargescontent" id="list-of-divs">
+		<center>
+		<h1 class="terms-heading">
+			TERMS & CONDITIONS
+		</h1></center>
+		<p class="terms">
+		Please read these terms and conditions of use carefully before accessing, using or obtaining any materials, information, products or services. By accessing the WAVES website, mobile or tablet application, or any other feature or other WAVES platform (collectively, "Our Website”), you agree to be bound by these terms and conditions ("Terms") and our Privacy Policy. If you do not accept all of these Terms, then you may not use Our Website. In these Terms, "we", "us", "our" and "WAVES" refers to WAVES Software Corporation, and "you" and "your" refers to you, the user of Our Website.
+</p>
+</br>
+<p class="terms">
+THESE TERMS INCLUDE AN ARBITRATION CLAUSE AND A WAIVER OF YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION OR REPRESENTATIVE LAWSUIT.
+</p>
+</br>
+<p class="terms">
+
+We may modify these Terms for any reason—at any time—by posting a new version on Our Website; these changes do not affect rights and obligations that arose prior to such changes. Your continued use of Our Website following the posting of modified Terms will be subject to the Terms in effect at the time of your use. Please review these Terms periodically for changes. If you object to any provision of these Terms or any subsequent modifications to these Terms or become dissatisfied with Our Website in any way, your only recourse is to immediately terminate use of Our Website.
+</p>
+</br>
+<p class="terms">
+
+1. We Do Not Sell Travel Products
+</p>
+</br>
+<p class="terms">
+
+Our Website is a travel search engine. WAVES does not provide, own or control any of the travel services and products that you can access through Our Website, such as flights, accommodations, rental cars, packages, or travel insurance (the “Travel Products”). The Travel Products are owned, controlled or made available by third parties (the “Travel Providers”) either directly (e.g., airline) or as an agent (e.g., online travel agency). The Travel Providers are responsible for the Travel Products. The Travel Provider’s terms and privacy policies apply to your booking so you must agree to and understand those terms. Furthermore, the terms of the actual travel provider (airline, hotel, tour operator, etc.) apply to your travel, so you must also agree to and understand those terms. Your interaction with any Travel Provider accessed through Our Website is at your own risk; WAVES does not bear any responsibility should anything go wrong with your booking or during your travel.
+</p>
+</br>
+<p class="terms">
+
+The display on Our Website of a Travel Product or Travel Provider does not—in any way—imply, suggest, or constitute a recommendation by WAVES of that Travel Product or Travel Provider, or any sponsorship or approval of WAVES by such Travel Provider, or any affiliation between such Travel Provider and WAVES.
+</p>
+</br>
+<p class="terms">
+
+WAVES hosts content, including prices, made available by or obtained from Travel Providers. WAVES is in no way responsible for the accuracy, timeliness or completeness of such content. Since WAVES has no control over the Travel Products and does not verify the content uploaded by the Travel Providers, it is not possible for us to guarantee the prices displayed on Our Website. Prices change constantly and additional charges (e.g., payment fees, services charges, checked-in luggage fees, local taxes and fees) may apply, so you should always check whether the price asked for a booking is the one you expected. More details here. Some Travel Products may also be sold in another currency than the one preset or chosen by you for the display of the search results. Our currency conversion is for informational purposes only and should not be relied upon as accurate or real-time; actual rates may vary, and your payment provider (e.g., your credit card company) may charge conversion fees and apply another date’s currency rate.
+</p>
+</br>
+<p class="terms">
+
+2. Booking through WAVES
+</p>
+</br>
+<p class="terms">
+	
+If you make a booking through Our Website for Travel Products, that booking is made with the Travel Provider named on the booking page and Our Website only acts as a user interface. Accordingly, WAVES has no responsibility for the booking or the Travel Product because WAVES has no involvement in creating the description of the Travel Product, in defining the price and any fees, or in providing the Travel Products that you book. If you have any issues or disputes with your booking and/or the Travel Product, you agree to address and resolve these with the Travel Provider and not with us.
+</p>
+</br>
+<p class="terms">
+
+
+3. Intellectual Property
+</p>
+</br>
+<p class="terms">
+	
+We, along with our corporate affiliates, the Travel Providers and other licensors, own all of the text, images, software, trademarks, service marks and other material contained on Our Website except User Content. You will not copy or transmit any of the material except if you are doing so for your personal, non-commercial use. All copyright, trademark and other proprietary rights notices presented on Our Website must appear on all copies you print. Other non-WAVES product, service, or company designations on Our Website belong to those respective third parties and may be mentioned in Our Website for identification purposes only. You should contact the appropriate third party for more complete information regarding such designations and their registration status. Your use of and access to Our Website does not grant you any license or right to use any of the marks included on Our Website.
+</p>
+</br>
+<p class="terms">
+	
+4. Use of Our Website
+</p>
+</br>
+<p class="terms">
+You may only use and register to become a user of Our Website or Trips if you are of sufficient legal age and can enter into binding contracts. If you become a registered user or make a booking resulting in the creation of a Trips account, you are responsible for maintaining the secrecy of your passwords, login and account information. You will be responsible for all use of Our Website by you, anyone using your password and login information (with or without your permission) and anyone who you allow to access your travel itineraries. All information that you provide to us must be accurate and up-to-date. If any of your information changes, you must immediately update it. If you have reason to believe that your account is no longer secure (e.g., loss, theft or unauthorized disclosure or use of your information or computer or mobile device used to access Our Website), you must promptly change your Personal information that is affected.
+</p>
+</br>
+
+<p class="terms">
+If you decide to have messages or other communications from Our Website sent directly to your mobile device, you are solely responsible for keeping us updated with your current phone number, respectively updating to the latest version of the mobile app, and for any charges incurred by receiving such messages. We will not be liable for information sent to a device that is associated with your outdated mobile phone number or using an outdated mobile app. If you install any software or enable any service that stores information from Our Website on any mobile device or computer, it is your responsibility, prior to transfer or disposal of such device, to remove your information or otherwise disable access to such software or service in order to prevent unauthorized access to your information or account.
+</p>
+</br>
+
+<p class="terms">
+You may only use Our Website to search for legitimate travel deals; you may not use Our Website to make any false, fraudulent or speculative reservation or any reservation in anticipation of demand. By using Our Website, you agree to comply with laws that apply to the United States and your own country, including laws that apply to exporting technical data.
+</p>
+</br>
+
+<p class="terms">
+In addition, you agree not to do any of the following without prior express written permission from WAVES:
+</p>
+</br>
+
+<p class="terms">
+(i) access the site with any manual or automated process for any purpose other than your personal use or for inclusion of WAVES pages in a search index. Use of any automated system or software to extract data from Our Website (“screen scraping”), for commercial or non-commercial purposes, is prohibited;
+</p>
+</br>
+
+<p class="terms">
+(ii) violate the restrictions in any robot exclusion headers on Our Website or bypass or circumvent other measures employed to prevent or limit access to Our Website;
+</p>
+</br>
+
+<p class="terms">
+(iii) deep-link to any portion of Our Website for any purpose;
+</p>
+</br>
+
+<p class="terms">
+(iv) use any device, software or routine that interferes or attempts to interfere with the normal operation of Our Website or take any action that imposes an unreasonable load on our computer or network equipment;
+</p>
+</br>
+
+<p class="terms">
+(v) reproduce, duplicate, copy, sell, trade, resell or exploit Our Website;
+</p>
+</br>
+
+<p class="terms">
+(vi) use any feature of Our Website for any purpose that is unlawful, harmful, or otherwise objectionable or inappropriate, as determined by us;
+</p>
+</br>
+
+<p class="terms">
+(vii) post or distribute any material on Our Website that violates the rights of any third party or applicable law;
+</p>
+</br>
+
+<p class="terms">
+(viii) use Our Website to collect or 
+</p>
+</br>
+
+<p class="terms">
+(ix) use Our Website for any commercial purpose; or
+</p>
+</br>
+
+<p class="terms">
+(x) transmit any ad or promotional materials on Our Website
+</p>
+</br>
+
+<p class="terms">
+We may, at our sole discretion, at any time and without advance notice or liability, suspend, terminate or restrict your access to any or all component(s) of Our Website. Furthermore, you can always delete your account here.
+</p>
+</br>
+
+<p class="terms">
+You further agree not to:
+</p>
+</br>
+
+<p class="terms">
+Circumvent, disable or otherwise interfere with security-related features of Our Website or features that prevent or restrict use or copying of any content or enforce limitations on the use of Our Website or any content on the Website;
+</p>
+</br>
+
+<p class="terms">
+Impersonate any person or entity, or otherwise misrepresent Your affiliation with a person or entity;
+</p>
+</br>
+
+<p class="terms">
+Intentionally or unintentionally violate or encourage others to violate any applicable law, statute, ordinance or regulation;
+</p>
+</br>
+
+<p class="terms">
+Provide false or deceptive information;
+</p>
+</br>
+<p class="terms">
+Solicit personal information from anyone;
+</p>
+</br>
+<p class="terms">
+Delete, add or otherwise change other people’s User Content;
+</p>
+</br>
+<p class="terms">
+Remove or alter any copyright or other proprietary notices on or in connection with any content on the Website;
+</p>
+</br>
+
+<p class="terms">
+Publicly disparage anyone or any User Content;
+</p>
+</br>
+
+<p class="terms">
+Publish or post threats of violence, or promote or encourage others to engage in violence or illegal activity.
+</p>
+</br>
+
+<p class="terms">
+Please report abusive content to TermsofuseAbuse@waves.com if you see it.
+</p>
+</br>
+
+<p class="terms">
+ 5. Warranty Disclaimer
+</p>
+</br>
+
+<p class="terms">
+Our Website, all content and services provided on Our Website and all itineraries that you obtain through Trips are provided on an "as is" and "as available" basis. Our content is largely generated in an automated fashion; errors can and do happen. We usually have many search results, but we are not comprehensive and do not display all available providers and offers. Accordingly, we do not always display the lowest available price. WAVES expressly disclaims—to the fullest extent permissible—all warranties of any kind, whether express or implied, including, but not limited to, any implied warranties of merchantability, fitness for a particular purpose, title, non-infringement, and security and accuracy, as well as all warranties arising by usage of trade, course of dealing, or course of performance.
+</p>
+</br>
+
+<p class="terms">
+6. Our Liability Is Limited
+</p>
+</br>
+
+<p class="terms">
+We (together with our officers, directors, employees, representatives, shareholders, affiliates, and providers), to the extent permitted by law, hereby expressly exclude any responsibility and liability for (a) any loss or damages to, or viruses that may infect, your computer equipment or other property as the result of your access to Our Website, your downloading of any content from Our Website or your use of Trips or (b) any injury; death; loss; claim; act of god; accident; delay; or any direct, special, exemplary, punitive, indirect, incidental or consequential damages of any kind (including—without limitation—lost profits or lost savings), whether based in contract, tort, strict liability or otherwise, that arise out of or is in any way connected with: (i) any use of Our Website, Trips or our content; (ii) any failure or delay (including—without limitation—the use of or inability to use any component of this Website for reservations or booking); or (iii) the performance or nonperformance by us or any Travel Provider, even if we have been advised of the possibility of damages to such parties or any other party. Some states or countries do not allow this limitation of liability, so the limitations above may not apply or apply only partially to you.
+</p>
+</br>
+
+<p class="terms">
+7. You Agree to Protect Us
+</p>
+</br>
+
+<p class="terms">
+Subject to these Terms, you will defend, indemnify and hold us and each of our officers, directors, employees and agents harmless from and against any claim, cause of action, liability, expense, loss or demand, including—without limitation—reasonable legal and accounting fees, arising out of, or in any way connected with your breach of these Terms or the agreements made part of these Terms by reference, your breach of any applicable law, and your use of or access to Our Website, Trips or the Intellectual Property.
+</p>
+</br>
+
+<p class="terms">
+8. Arbitration and Waiver
+</p>
+</br>
+
+<p class="terms">
+You agree that by accepting the Terms, you and Company are each waiving the right to trial by jury and the ability to participate in a class action. ANY AND ALL DISPUTES COMPANY OR YOU HAS RELATING IN ANY WAY TO THE SERVICES OR YOUR RELATIONSHIP WITH THE COMPANY (INCLUDING—WITHOUT LIMITATION—WITH RESPECT TO DATA, YOUR INTERACTION WITH THE COMPANY, COMPANY’S ADVERTISEMENTS AND DISCLOSURES, EMAIL AND MOBILE SMS (TEXT) MESSAGES COMPANY SENDS TO YOU, OR THE USE OR DISCLOSURE OF ANY INFORMATION ABOUT YOU), THESE TERMS OF USE, AND PRIVACY POLICY (COLLECTIVELY, “CLAIMS”) WILL BE SUBMITTED TO CONFIDENTIAL ARBITRATION IN THE FEDERAL JUDICIAL DISTRICT IN WHICH YOU RESIDE, EXCEPT TO THE EXTENT THAT YOU HAVE, IN ANY WAY, VIOLATED OR THREATENED TO VIOLATE ANY COMPANY INTELLECTUAL PROPERTY RIGHT. CLAIMS INCLUDE CLAIMS BASED ON CONTRACT, TORT (INCLUDING INTENTIONAL TORT), FRAUD, AGENCY, YOUR OR THE COMPANY’S NEGLIGENCE, STATUTORY OR REGULATORY PROVISIONS, OR ANY OTHER SOURCE OF LAW.
+</p>
+</br>
+<p class="terms">
+If you intend to seek arbitration, you must first send to the Company, by certified mail, a written Notice of Dispute ("Notice"). The Notice to Company must be sent to legal@waves.com. The Notice shall describe the nature and basis of the claim or disputes and the specific relief sought. If you and the Company cannot reach an agreement to resolve the claim within thirty (30) days after the Notice is received, either party may commence arbitration. All arbitrations required by these Terms will be conducted under the Commercial Arbitration rules of the American Arbitration Association. The arbitrator’s award is binding and may be entered in any court of competent jurisdiction. To the fullest extent permitted by applicable law, no arbitration brought under, or with respect to, Claims is to be joined to an arbitration involving any other party subject to these Terms, whether through class arbitration proceedings or otherwise. Unless you and the Company agree otherwise, the arbitrator may not consolidate more than one person’s claims, and may not otherwise preside over any form of a representative, private attorney general or class proceeding.
+</p>
+</br>
+<p class="terms">
+For arbitration claims that you assert against Company in accordance with this section (but not for any arbitration claim against you), Company will pay all of your administrative, hearing, and arbitrator’s
+
+
+
+
+		</p>
+
+		</div>
+
+
+
+		
+		
+
+<!-- contact section starts here -->
+	<div class="address" id="contact">
+		
+		<div class="linkcontainer">
+	<a class="links">About</a>
+	<a class="links">Flight Tracker</a>
+	<a class="links">Privacy</a>
+	<a class="links">Help</a>
+	<a class="links">© 2022 Flight</a>
+	</div>
+		
+		<p class="note1">
+			Search cheap flights with WAVES. Search for the cheapest airline tickets for all the top airlines around the world and the top international flight routes. WAVES searches hundreds of travel sites to help you find cheap airfare and book a flight that suits you best. Since WAVES searches many plane tickets sites at once, you can find cheap tickets from cheap airlines quickly.
+</p>
+</div> 
+	<!-- contact section ends here -->
+	
+<script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<title>flightbooking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" language="javascript" src="jQuery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="flight.css">
+	
+	<style>
+		* {box-sizing:border-box}
+		body{
+			background-color: white;
+			margin: 0px;
+			}
+/* The side navigation menu */
+.sidenavi {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #F8F8F8; /* grey*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenavi a {
+  padding: 8px 8px 8px 32px;
+  margin-left: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #575550;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavi a:hover {
+	border-left: #07244B 2px solid;
+  color: grey;
+  font-weight: 700;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenavi .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Hamburger menu icon */
+.bar1, .bar2, .bar3 {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  Padding: 0px;
+}
+.bar {
+	width: 22px;
+	margin-top: 7px;
+	margin-right: 15px;
+	padding-top: 5px;
+	display: block;
+	float: left;
+	}
+	
+	.waves1{
+		color: white;float:left;display: block;margin:10px;font-family: Sans-serif;
+		background-color: #07244B;
+		padding: 2px 4px;
+		font-size: 15px;
+		}
+		
+		
+/* style main*/
+.main{
+	background-color: white;
+	height: 45px;
+	padding-top: 3px;
+	padding-left: 15px;
+	overflow: hidden;
+	border-bottom: 1px solid #E1EBEE;
+	}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Style the submit button */
+.hero{
+	height: 400px;
+	width: 100%;
+	background-color: grey;
+	}
+	
+	.chargescontent{
+		width: 70%;
+		margin: auto;
+		padding: 40px 0px;
+		}
+		
+		.charges{
+			width: 100%;
+			height: 250px;
+			border-radius: 8px;
+	border: 2px solid #E1EBEE;
+	margin-top: 15px;
+	box-shadow: 0 2px 5px 0 #E1EBEE; 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+	display: none;
+			}
+		
+		.place, .thetime{
+			font-size: 20px;
+			font-weight: 500;
+			}
+			
+			.startperiod, .location{
+				font-size: 13px;
+				}
+				
+				.linea, .line1{
+			border-top: 1px solid lightgrey;
+			}
+			
+			.line1{
+				color: #8596A3;
+				margin-top: 43px;
+				}
+			
+			.division2, .division3, .division4{
+				float: left;
+				height: 55%;
+				margin: 3px;
+				margin-top: 7px;
+				background-color: white;
+				}
+					
+					.division2 {
+					width: 15%;
+					}
+				
+				.division3 {
+					width: 32%;
+					text-align: center;
+					margin: 0px 8px;
+					padding-top: 10px;
+					position: relative;
+					}
+				
+				.division4 {
+					width: 25%;
+					text-align: center;
+					}
+				
+				.division5{
+					height: 20%;
+					width: 100%;
+				margin-top: 8px;
+					}
+					
+					.airline {
+						height: 35px;
+					width: 70%;
+					margin: auto;
+					margin-top: 18px;
+					background-color: white;
+					display: block;
+						}
+						
+						.airline img {
+						height: 100%;
+					width: 100%;
+					}
+						
+						.thetime, .price{
+			font-size: 15px;
+			font-weight: 600;
+			color: black;
+			}
+			
+			.location, .airlinetype{
+				font-size: 13px;
+				margin-top: 0px;
+				 color: #575550;
+				}
+					
+					.details{
+						margin-top: 25px;
+						}
+						
+					.details1{
+						text-align: right;
+						margin-top: 25px;
+						}
+						
+						.details4{
+						margin-top: 40px;
+						}
+						
+						.distcont{
+							margin-top: 50px;
+							padding: 0px 3px;
+							}
+							
+							 .distance{
+								color: grey;
+								font-size: 12px;
+								margin-top: -8px;
+								position: absolute;
+								background-color: white;
+								right: 63px;
+								}
+								
+								.airlinetype{
+									margin: 5px 15px;
+									}
+								
+								.price{
+			font-size: 20px;
+			font-weight: 650;
+			}
+	
+	.inc{
+						padding:0px 50px;
+						}
+						
+						.btn5{
+		background-color: #07244B;
+		margin-top: 10px;
+		margin-bottom: 29px;
+		color: white;
+		font-weight: 700;
+		text-align: center;
+		width:100%;
+		height: 45px;
+		border-radius:8px;
+		border: none; 
+		}
+	
+.about, .achievement, .gallery{
+	
+	width: 100%;
+	margin: auto;
+	margin-top: 15px;
+	font-size: 15px;
+	font-family: Optima;
+	color: grey;
+	padding: 20px 10px;
+	border: 2px solid #E1EBEE;
+	box-shadow: 0 2px 5px 0 #E1EBEE; 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	
+	}
+	
+	.c {
+		margin-top: 5px;
+		}
+		
+		.R {
+			float: right;
+			}
+	
+						.pay img{
+			width: 25px;
+			height: 25px;
+			margin: 0px 10px;
+			}
+			
+			.pay {
+			width: 100%;
+			height: 35px;
+			margin-top: 15px;
+			font-size: 13px;
+			color: #575550;
+			padding: 4px 0px;
+			border:none;
+			text-align: left;
+			}
+			
+			.pay:hover {
+				font-weight: 500;
+				}
+				
+				#mySummary{
+					display: none;
+					}
+					
+					input[type=text], select{
+						width: 100%;
+	margin-top: 15px;
+	font-size: 15px;
+	font-family: Optima;
+	color: grey;
+	padding: 10px 10px;
+	border: 2px solid #E1EBEE;
+	border-radius: 8px;
+	background-color: #E1EBEE;
+						}
+ 
+
+@media screen and (max-width: 600px) {
+  .hero{
+	height: 200px;
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+   	.chargescontent{
+		width: 90%;
+		} 
+		
+		.grp1a{
+					float: right;
+					margin: 10px;
+					}
+					
+					.modify{
+	height: 65%;
+	}
+	
+	.charges{
+			height: 200px;
+			}
+			
+			.division5{
+				margin-top: 8px;
+					}
+					
+					.airline {
+						height: 25px;
+						}
+						
+						.details{
+						margin-top: 15px;
+						}
+						
+					.details1{
+						margin-top: 15px;
+						}
+						
+						.distcont{
+							margin-top: 35px;
+							}
+							
+							.division3 {
+					padding-top: 0px;
+					}
+					
+					 .inc{
+						padding:0px 20px;
+						}
+						
+						 .distance{
+								right: 30px;
+								}
+								
+								
+   }
+
+	</style>
+</head>
+<body>
+	                   <!-- naval bar-->
+<div id="mySidenav" class="sidenavi">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#hotels">Hotel</a>
+  <a href="#flight">Flight</a>
+  <a href="#cars">Rental cars</a>
+  <a href="#about">About</a>
+  <a href="#achieve">Achievement</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<!-- Use any element to open the sidenav -->
+<!-- hamburger and header -->
+<div class="main">
+<span onclick="openNav()"> <div class="bar">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+</div></span>
+<h3 class="waves1">WAVES</h3>
+
+ <span onclick="openSearch()">
+ <div class="search"><i class="fa fa-search"></i></div></span>
+</div>
+
+<!-- Man owar logo -->
+ <div class="hero" id="home">
+ 	<img src="image.flight/welcome.png" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+	<img src="image.flight/flightbook1.jpeg" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+<img src="image.flight/flightbook2.jpeg" class="mySlides" style="width:100%;height:100%;object-fit: cover;">
+</div>
+
+<!-- flight review -->
+	<div class="chargescontent" id="list-of-divs">
+		
+		 <div class="achievement">
+ 	<div class="trip_inner c">
+		<span class="thetime">Almost done!</span><br /><span class="location">Enter your details and complete your booking now.</span>
+		</div>
+</div>
+
+<div onclick="summarya()">
+	<div class="achievement">
+		<div class="trip_inner c">
+		<span class="thetime L">Summary of Flight</span>
+<span class="thetime R" id="myStatea">Show</span>
+</div></div>
+<div class="charges American B-E WBJ" data-number="497" data-name="c" id="mySummarya">
+	
+	<div class="division5">
+				<p class="airlinetype">American Airlines</p>
+					<hr class="linea">
+				</div>
+				
+		
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">LAX</span><br>
+				<span class="location">Aug 10</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">EWR</span><br>
+				<span class="location">Aug 11</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">EWR</span><br>
+				<span class="location">Aug 11</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">LAX</span><br>
+				<span class="location">Aug 12</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="497" data-eur="487">$497</span><br>
+				
+				</div>
+		<div class="division5 inc">
+				<p class="thetime">Economy</p>
+				</div>
+			
+		</div></div>
+		
+		 <div class="achievement">
+			<div class="trip_inner c" onclick="summary()">
+		<span class="thetime L">Summary of charges</span><span class="thetime R" id="myState">Show</span>
+		</div>
+		<div id="mySummary" >
+		<hr class="line1" style="margin-top:15px;">
+
+<div class="trip_inner c">
+		<span class="thetime L">Cost per person:</span><span class="thetime R">$497</span></br><span class="thetime L">round trip ticket</span></br>
+		</div>
+		
+		<div class="trip_inner c">
+		<span class="thetime L">Number of travelers</span><span class="thetime R">1</span>
+		</div>
+		
+		<div class="trip_inner c">
+		<span class="thetime L">Seat Fees</span><span class="thetime R" id="seatAmount">$34</span>
+		</div>
+		
+		<div class="trip_inner c">
+		<span class="thetime L">Convenience Fee</span><span class="thetime R">$10</span>
+		</div>
+		
+		<hr class="line1">
+		
+		<div class="trip_inner c">
+		<span class="thetime L">You pay today</span><span class="thetime R">$543</span>
+		</div>
+		</div>
+</div>
+
+ <div class="about">
+ 	<div class="trip_inner c">
+		<span class="location">Prices includes all taxes and fees charged by WAVES.</span><br /><span class="location">Baggage fees are not included in your trip cost.</span>
+		<br /><span class="location"><strong>Please note:</strong> We have combined two one-way ticket to get the lowest price possible. Each ticket is subjected to its own rules and regulations.</span>
+		</div>
+</div>
+
+<div class="achievement">
+ 	<div class="trip_inner c">
+		<span class="location">Spelling of name must match government-issued photo ID</span>
+		</div>
+		
+		<div class="trip_inner c">
+		<span class="thetime L">Flight Passenger</span><span class="thetime R">1</span>
+		</div>
+		
+		<div class="trip_inner c">
+		<input type="text" placeholder="First name">
+			<br>
+				<input type="text" placeholder="Middle name">
+			<br>
+				<input type="text" placeholder="Last name">
+			<br>
+				<select>
+					<option>Suffix <span class="location">(optional)</span></option>
+					<option>II</option>
+					<option>III</option>
+					<option>IV</option>
+					<option>Sr</option>
+					<option>Jr</option>
+</select>
+
+<select>
+					<option>Gender</option>
+					<option>Male</option>
+					<option>Female</option>
+					
+</select>
+		</div>
+</div>
+
+<button class="btn5">Continue</button> 
+
+		</div>
+		
+		<!-- currency option starts here-->
+			<div class="sidenav" id="myCurrency">
+		<div class="trip_inner">
+		<button class="times" onclick="closeCurrency()">&times;</button>
+	</div>
+<hr class="line">
+<div class="trip_inner">
+	<span class="right" style="width:100%;">Most used currencies</span>
+	
+	<span onclick="usdCurrency()"><button class="pay curr" value="usd">
+	<img src="image.flight/usd.png" alt="usd">UNITED STATES DOLLAR
+</button></span>
+		
+<span onclick="eurCurrency()"><button class="pay curr" value="eur">
+	<img src="image.flight/eur.png" alt="euro">EURO
+</button></span>
+
+	</div>
+</div>
+			<!-- currency option ends here-->
+
+<!-- contact section starts here -->
+	<div class="address" id="contact">
+		<button class="btn7" style="margin-top: 55px;">United States (English)</button>
+		<button class="btn7" style="margin-top: 15px;" onclick="openCurrency()"><span id="money">$ United States Dollar</span></button>
+		
+		<div class="linkcontainer">
+	<a class="links">Terms and Condition</a>
+	<a class="links">Flight Tracker</a>
+	<a class="links">About</a>
+	<a class="links">Privacy</a>
+	<a class="links">Help</a>
+	<a class="links">© 2022 Flight</a>
+	</div>
+		
+		<p class="note1">
+			Search cheap flights with WAVES. Search for the cheapest airline tickets for all the top airlines around the world and the top international flight routes. WAVES searches hundreds of travel sites to help you find cheap airfare and book a flight that suits you best. Since WAVES searches many plane tickets sites at once, you can find cheap tickets from cheap airlines quickly.
+</p>
+</div> 
+	<!-- contact section ends here -->
+	
+<script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+	
+    
+    function openCurrency(){
+	var x = document.getElementById("myCurrency");
+	x.style.display ="block";
+	}
+	
+	function closeCurrency(){
+	var x = document.getElementById("myCurrency");
+	x.style.display ="none";
+	}
+	
+	function eurCurrency(){
+	var cash = document.getElementById('money');
+	cash.innerHTML = "€ Euro";
+	}
+	
+	function usdCurrency(){
+	var cash = document.getElementById('money');
+	cash.innerHTML = "$ United States Dollar";
+	}
+	
+	$(function() {
+  $(".curr").on("click",function() {
+    var curr   = this.value;
+    var prefix = curr=="usd"; // or ["usd","yen",...].indexOf(curr); for more
+    var sign   = curr=="usd"?"$":"€";
+    $(".price").each(function(){
+      $(this).text(
+        (prefix?sign:"")   +
+        (prefix?"":sign) +
+        $(this).data(curr) 
+      );
+      closeCurrency();
+    })
+  }).change();
+});
+    
+function summary(){
+	var x,y,z;
+	x = document.getElementById("mySummary");
+	y = document.getElementById("myState");
+	z = y.innerHTML;
+	if (z == "Show"){
+	x.style.display ="block";
+	y.innerText = "Hide";
+	}else{
+		x.style.display ="none";
+	y.innerText = "Show";
+		}
+	}
+	
+	function summarya(){
+	var x,y,z;
+	x = document.getElementById("mySummarya");
+	y = document.getElementById("myStatea");
+	z = y.innerHTML;
+	if (z == "Show"){
+	x.style.display ="block";
+	y.innerText = "Hide";
+	}else{
+		x.style.display ="none";
+	y.innerText = "Show";
+		}
+	}
+</script>
+</body>
+</html>

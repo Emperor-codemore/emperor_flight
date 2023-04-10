@@ -1,0 +1,1644 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<title>waves</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" language="javascript" src="jQuery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="flight.css">
+	
+	<style>
+		* {
+  box-sizing: border-box;
+}
+		body{
+			background-color: lightgrey;
+			margin: 0px;
+			}
+			
+			.container{
+				background-color: white;
+				}
+			
+			.navcont{
+				width: 100%;
+				height: 130px;
+				background-color: white;
+				border-bottom: 1px solid #E1EBEE;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				}
+				
+			.grp1{
+				width: 33.3%;
+				height: 80px;
+				float: left;
+				padding: 5px;
+				}
+				
+				.grp1a{
+					float: right;
+					margin: 20px;
+					}
+					
+					.grp1b{
+						margin: auto;
+						text-align: center;
+						margin-top: 20px;
+						}
+						
+				.topnavlogo, .topnavlogo1 {
+		height: 30;
+	width: 60px;
+	padding: 5px;
+	background-color: #07244B;
+	font-weight: 650;
+	font-size: 15px;
+	color: white;
+	margin: 15px;
+	display: block;
+		}
+		
+		.topnavlogo1 {
+			display: inline;
+			margin: 15px 0px;
+			}
+		
+		.topnavdetail {
+		height: 40px;
+	width: 100px;
+	padding: 5px;
+	float: right;
+		}
+		
+		 .waves {
+ 	float: right;
+ margin-top: 5px;
+ margin-right: 5px;
+ }
+		
+		.band{
+      margin: 4px, 4px;
+        padding: 4px;
+        background-color: white;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+	}
+	
+.band a {
+	margin-right: 5px;
+	text-decoration:none;
+	display: inline-block;
+	font-size: 12px;
+	font-family: Optima;
+	color: #575550;
+	padding: 8px;
+	box-shadow: 0 2px 5px 0 #E1EBEE; 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	border: 2px solid #E1EBEE;
+	
+	}
+	
+	.chargescontent{
+		width: 70%;
+		margin: auto;
+		padding: 40px 0px;
+		}
+		
+		.charges{
+			width: 100%;
+			height: 200px;
+			border-radius: 8px;
+	border: 2px solid #E1EBEE;
+	margin-top: 15px;
+	box-shadow: 0 2px 5px 0 #E1EBEE; 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+			}
+		
+		.place, .thetime{
+			font-size: 20px;
+			font-weight: 500;
+			}
+			
+			.startperiod, .location{
+				font-size: 13px;
+				}
+				
+				.linea, .line1{
+			border-top: 1px solid lightgrey;
+			}
+			
+			.line1{
+				color: #8596A3;
+				}
+			
+			.division1, .division2, .division3, .division4{
+				float: left;
+				height: 70%;
+				margin: 3px;
+				margin-top: 7px;
+				}
+				
+				.division1 {
+					width: 10%;
+					}
+					
+					.division2 {
+					width: 15%;
+					}
+				
+				.division3 {
+					width: 22%;
+					text-align: center;
+					margin: 0px 8px;
+					padding-top: 10px;
+					}
+				
+				.division4 {
+					width: 25%;
+					text-align: center;
+					}
+				
+				.division5{
+					height: 20%;
+					width: 100%;
+				margin-top: 158px;
+					}
+					
+					.airline {
+						height: 35px;
+					width: 70%;
+					margin: auto;
+					margin-top: 18px;
+					background-color: white;
+					display: block;
+						}
+						
+						.airline img {
+						height: 100%;
+					width: 100%;
+					}
+						
+						.thetime, .price{
+			font-size: 15px;
+			font-weight: 600;
+			color: black;
+			}
+			
+			.location, .airlinetype{
+				font-size: 13px;
+				margin-top: 0px;
+				 color: #575550;
+				}
+					
+					.details{
+						margin-top: 25px;
+						}
+						
+					.details1{
+						text-align: right;
+						margin-top: 25px;
+						}
+						
+						.details4{
+						margin-top: 40px;
+						}
+						
+						.distcont{
+							margin-top: 50px;
+							padding: 0px 3px;
+							}
+							
+							 .distance{
+								color: grey;
+								font-size: 12px;
+								}
+								
+								.airlinetype{
+									margin: 5px 15px;
+									}
+								
+								.price{
+			font-size: 20px;
+			font-weight: 650;
+			}
+			
+			.pay img{
+			width: 25px;
+			height: 25px;
+			margin: 0px 10px;
+			}
+			
+			.pay {
+			width: 100%;
+			height: 35px;
+			margin-top: 15px;
+			font-size: 13px;
+			color: #575550;
+			padding: 4px 0px;
+			border:none;
+			text-align: left;
+			}
+			
+			.pay:hover {
+				font-weight: 500;
+				}
+						
+						.minimg{
+							height: 40px;
+							width: 40px;
+							display: inline-block;
+							}
+							
+							.minimg img{
+								height: 100%;
+							width: 100%;
+								}
+							
+							.airlineimage{
+								height: 30px;
+							width: 30px;
+							display: inline-block;
+							margin: 2px 10px;
+								}
+								
+								.airlineimage img{
+								height: 100%;
+							width: 100%;
+								}
+								
+								.cab{
+									margin: 1px 0px;
+									width: 20px;
+									}
+								
+							.btn5{
+		background-color: #07244B;
+		margin-top: 10px;
+		margin-bottom: 29px;
+		color: white;
+		font-weight: 700;
+		text-align: center;
+		width:100%;
+		height: 45px;
+		border-radius:8px;
+		border: none; 
+		}
+		
+		.more{
+			margin-top: 100px;
+			}
+			
+ 
+   @media screen and (max-width: 600px) {
+   	.chargescontent{
+		width: 90%;
+		} 
+		
+		.grp1a{
+					float: right;
+					margin: 10px;
+					}
+					
+					.modify{
+	height: 65%;
+	}
+	
+	.charges{
+			height: 170px;
+			}
+			
+			.division5{
+				margin-top: 128px;
+					}
+					
+					.airline {
+						height: 25px;
+						}
+						
+						.details{
+						margin-top: 15px;
+						}
+						
+					.details1{
+						margin-top: 15px;
+						}
+						
+						.distcont{
+							margin-top: 35px;
+							}
+							
+							.division3 {
+					padding-top: 0px;
+					}
+	
+   }
+
+	</style>
+</head>
+<body>
+	<!-- container starts here-->
+	<div class="container">
+		<div class="divider" id="sep"></div>
+		
+		<!-- nav container starts here-->
+		<div class="navcont">
+		<div class="navcontgrp1">
+		<div class="grp1">
+		
+		<span class="topnavlogo">WAVES</span>
+
+	</div><div class="grp1">
+		<div class="grp1b"><p class="place"><span>LAX</span>-<span>NYC</span></p>
+			<p class="startperiod"><span>Jul 27</span>-<span>Aug 3</span></p>
+</div>
+		
+	</div><div class="grp1">
+		<div class="grp1a"><span class="minimg" onclick="openProfile()"><img src="image.flight/notification.png" alt="notification bell"></span>
+		
+		<div class="date" id="myProfile">
+		<div class="trip_inner">
+		<button class="times" onclick="closeProfile()">&times;</button>
+ <span class="waves">
+		<span class="topnavlogo1">W</span>
+		<span class="topnavlogo1">A</span>
+		<span class="topnavlogo1">V</span>
+		<span class="topnavlogo1">E</span>
+		<span class="topnavlogo1">S</span>
+		</span>
+	</div>
+<hr class="line">
+<div class="trip_innera">
+		<h2 class="times" style="margin-top:30px;font-size: 20px;">Sign in to see more</h2>
+		<br>
+			<span>Get access to member-only deals, price alerts and more</span>
+</div>
+<div class="trip_innera">
+		<p class="sign_in">Continue with Google</p>
+		<p class="sign_in" onclick="openEmail()">Continue with email</p>
+		<p class="sign_in">Continue with Facebook</p> 
+		<a href="https://account.booking.com/sign-in?op_token=EgVvYXV0aCKWAQoURXNqQnAxM09VQlZ3VVFjRGFiUGsSCWF1dGhvcml6ZRokaHR0cHM6Ly93d3cua2F5YWsuY29tL3NpZ25pbi1ib29raW5nIhplbWFpbCBwcm9maWxlIGxpbmtfYWNjb3VudCorNEpDX19Na1A1eE1kZEFDX0llUG5qZ1NEeGVzeWNGVGthTDJPRkxxQllnTUIEY29kZSoSMPe5t6fY2iU6AEIAWNjW4ZYG" class="link1"><p class="sign_in">Continue with Booking.com</p></a>
+		<p class="sign_in">Continue with Apple</p>
+		<span>By signing in you accept our Terms of use and Privacy policy</span>
+</div>
+</div>
+
+<div class="date" id="myEmail">
+		<div class="trip_inner">
+		<button class="times" onclick="closeEmail()">&lt;</button>
+	</div>
+
+<div class="trip_innera">
+		<h2 class="times" style="margin-top:30px;font-size: 20px;">What's your email address?</h2>
+		<br>
+</div>
+<div class="trip_innera">
+		<input class="email" type="email" placeholder="Email address">
+			<br> 
+			<button class="btn5">Continue</button>
+		
+		<span>By signing in you accept our Terms of use and Privacy policy</span>
+</div>
+</div>
+		
+		<span class="minimg" onclick="openCurrency()"><img src="image.flight/converter.png" alt="currency converter"></span>
+</div>
+		
+	</div>
+		
+	</div>
+	
+	<div class="navcontgrp2">
+		<div class="band">
+	<a onclick="openSort()">Sort: <span id="sortChoice">best</span></a>
+  <a onclick="openFlexOption()">Flexible options</a>
+  <a onclick="openStop()">Stops</a>
+	<a onclick="openTimer()">Timer</a>
+<a onclick="openAirport()">Airports</a>
+  <a onclick="openBag()">Bags</a>
+  <a onclick="openAirline()">Airlines</a>
+  <a onclick="openDuration()">Duration</a>
+  <a onclick="openQuality()">Quality</a>
+<a onclick="openBankSite()">Booking sites</a>
+  <a onclick="openPrice()">Price</a>
+  <a onclick="openCabin()">Cabin</a>
+  <a onclick="openAircraft()">Aircraft</a>
+</div>
+	</div>
+		
+	</div>
+	<!-- nav container ends here-->
+		
+		<!-- currency option starts here-->
+			<div class="sidenav" id="myCurrency">
+		<div class="trip_inner">
+		<button class="times" onclick="closeCurrency()">&times;</button>
+	</div>
+<hr class="line">
+<div class="trip_inner">
+	<span class="right" style="width:100%;">Most used currencies</span>
+	
+	<span onclick="usdCurrency()"><button class="pay curr" value="usd">
+	<img src="image.flight/usd.png" alt="plane">UNITED STATES DOLLAR
+</button></span>
+		
+<span onclick="eurCurrency()"><button class="pay curr" value="eur">
+	<img src="image.flight/eur.png" alt="plane">EURO
+</button></span>
+
+	</div>
+</div>
+			<!-- currency option ends here-->
+		
+		 <!-- sort option starts here-->
+		<div class="modify" id="mySort">
+<div class="trip_in">
+<span class="right">Sort</span>
+<span class="left" onclick="closeSort()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+<label><input type="radio" onchange="radioSort(this)" value="number" name="radio-sort" checked /> Best</label><br>
+      <label><input type="radio" onchange="radioSort(this)" value="numbera" name="radio-sort" /> Cheapest</label><br>
+      <label><input type="radio" onchange="radioSort(this)" value="ascending" name="radio-sort" /> Fastest</label><br>
+      <label><input type="radio" onchange="radioSort(this)" value="descending" name="radio-sort" /> Earliest</label>
+</div>
+</div>
+  <!-- sort option ends here-->
+  	
+   <!-- flexible option starts here-->
+		<div class="modify" id="myFlexOption">
+<div class="trip_in">
+<span class="right">Flexible option</span>
+<span class="left" onclick="closeFlexOption()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+	 <label class="labeltouch" style="font-size:15px;">
+                <input type="checkbox" name="flexOptionCheckbox" 
+                       value="covid">View only flexible booking options due to COVID-19 </label><br>
+                       	<button class="btn5" onclick="closeFlexOption()" style="bottom: 10; position: absolute;margin:auto;width:95%;">Done</button>
+</div>
+</div>
+  <!-- flexible option ends here-->
+  	
+  <!-- stop option starts here-->
+		<div class="modify" id="myStop">
+<div class="trip_in">
+<span class="right">Stops</span>
+<span class="left" onclick="closeStop()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+
+</div>
+</div>
+  <!-- stop option ends here-->
+  	
+  <!-- timer option starts here-->
+		<div class="modify" id="myTimer">
+<div class="trip_in">
+<span class="right">Timer</span>
+<span class="left" onclick="closeTimer()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+
+</div>
+</div>
+  <!-- timer option ends here-->
+  	
+   <!-- airport option starts here-->
+		<div class="modify" id="myAirport">
+<div class="trip_in">
+<span class="right">Airports</span>
+<span class="left" onclick="closeAirport()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+
+</div>
+</div>
+  <!-- airport option ends here-->
+  	
+   <!-- bags option starts here-->
+		<div class="modify" id="myBag">
+<div class="trip_in">
+<span class="right">Bags</span>
+<span class="left" onclick="closeBag()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+<div class="trip_inner1">
+		<span>Carry-on bag</span>
+		<span class="left" >
+<button class="iterate" id="deca">-</button>
+<button class="value" id="showa">0</button>
+<button class="iterate" id="inca">+</button></span>
+</div>
+<div class="trip_inner1">
+		<span>Checked bag</span>
+		<span class="left" >
+<button class="iterate" id="decb">-</button>
+<button class="value" id="showb">6</button>
+<button class="iterate" id="incb">+</button></span>
+</div> 
+<hr class="line">
+	<div class="trip_inner">
+		<button class="btn5" onclick="closeBag()" style="bottom: 10; position: absolute;margin:auto;width:90%;">Done</button> 
+</div>
+</div>
+</div>
+  <!-- bags option ends here-->
+  	
+   <!-- airlines option starts here-->
+		<div class="modify" id="myAirline">
+<div class="trip_in">
+<span class="right">Airlines</span>
+<span class="left" onclick="closeAirline()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+		<span class="right general">Show Airlines</span>
+<label class="labeltouch">
+                <input type="checkbox" name="airlineCheckbox"
+                       value="United" checked> <span class="airlineimage"><img src="image.flight/united.png" alt="united airlines"></span>United Airlines</label>
+                       <hr class="line">
+         <br>  <label class="labeltouch">
+                <input type="checkbox" name="airlineCheckbox"
+                       value="American" checked><span class="airlineimage"><img src="image.flight/american.png" alt="american airlines"></span> American Airlines</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="airlineCheckbox" 
+                       value="Jetblue" checked> <span class="airlineimage"><img src="image.flight/jetblue.png" alt="jetblue airlines"></span>JetBlue Airlines</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="airlineCheckbox" 
+                       value="Spirit" checked><span class="airlineimage"><img src="image.flight/spirit.png" alt="spirit airlines"></span> Spirit Airlines</label><hr class="line">
+<br>
+                       	 <label class="labeltouch">
+                <input type="checkbox" name="airlineCheckbox" 
+                       value="Alaska" checked> <span class="airlineimage"><img src="image.flight/alaska.png" alt="alaska airlines"></span>Alaska Airlines</label><br>
+                       	<button class="btn5" onclick="closeAirline()">Done</button>
+</div>
+</div>
+  <!-- airlines option ends here-->
+  	
+   <!-- duration option starts here-->
+		<div class="modify" id="myDuration">
+<div class="trip_in">
+<span class="right">Duration</span>
+<span class="left" onclick="closeDuration()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+
+</div>
+</div>
+  <!-- duration option ends here-->
+  	
+   <!-- quality option starts here-->
+		<div class="modify" id="myQuality">
+<div class="trip_in">
+<span class="right">Quality</span>
+<span class="left" onclick="closeQuality()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+         <br>  <label class="labeltouch">
+                <input type="checkbox" name="qualityCheckbox"
+                       value=""><span class="airlineimage cab"></span>Hacker fares</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="qualityCheckbox" 
+                       value=""><span class="airlineimage cab"></span>Duplicate code</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="qualityCheckbox" 
+                       value=""><span class="airlineimage cab"></span>WiFi flights only</label><hr class="line">
+<br>
+                       	 
+                       	<label class="labeltouch">
+                <input type="checkbox" name="qualityCheckbox" 
+                       value=""><span class="airlineimage cab"></span>Red-eye flights</label><br>
+              
+                       	<button class="btn5" onclick="closeQuality()" style="bottom: 10; position: absolute;margin:auto;width:95%;">Done</button>
+</div>
+</div>
+  <!-- quality option ends here-->
+  	
+   <!-- banking sites option starts here-->
+		<div class="modify" id="myBankSite">
+<div class="trip_in">
+<span class="right">Booking sites</span>
+<span class="left" onclick="closeBankSite()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+ <label class="labeltouch">
+                <input type="checkbox" name="banksiteCheckbox"
+                       value=""><span class="airlineimage cab"></span>B-Flies</label>
+                       <hr class="line">
+         <br>  <label class="labeltouch">
+                <input type="checkbox" name="banksiteCheckbox"
+                       value=""><span class="airlineimage cab"></span>Times</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="banksiteCheckbox" 
+                       value=""><span class="airlineimage cab"></span>Premium</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value=""><span class="airlineimage cab"></span>Priceline</label><hr class="line">
+<br>
+                       	 
+                       	<label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value=""><span class="airlineimage cab"></span>Expedeia</label><br>
+              
+                       	<button class="btn5" onclick="closeBankSite()" style="bottom: 10; position: absolute;margin:auto;width:95%;">Done</button>
+</div>
+</div>
+  <!-- banking sites option ends here-->
+  	
+   <!-- price option starts here-->
+		<div class="modify" id="myPrice">
+<div class="trip_in">
+<span class="right">Price</span>
+<span class="left" onclick="closePrice()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+
+</div>
+</div>
+  <!-- price option ends here-->
+  	
+   <!-- cabin option starts here-->
+		<div class="modify" id="myCabin">
+<div class="trip_in">
+<span class="right">Cabin</span>
+<span class="left" onclick="closeCabin()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+<label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox"
+                       value="B-E" checked><span class="airlineimage cab"></span>Basic Economy</label>
+                       <hr class="line">
+         <br>  <label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox"
+                       value="E" checked><span class="airlineimage cab"></span>Economy</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value="P" checked><span class="airlineimage cab"></span>Premium</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value="B" checked><span class="airlineimage cab"></span>Business</label><hr class="line">
+<br>
+                       	 <label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value="F" checked><span class="airlineimage cab"></span>First</label><br><hr class="line">
+                       	<label class="labeltouch">
+                <input type="checkbox" name="cabinCheckbox" 
+                       value="M" checked><span class="airlineimage cab"></span>Mixed</label><br>
+                       	<button class="btn5" onclick="closeCabin()">Done</button>
+</div>
+</div>
+  <!-- cabin option ends here-->
+  	
+   <!-- aircraft option starts here-->
+		<div class="modify" id="myAircraft">
+<div class="trip_in">
+<span class="right">Aircraft</span>
+<span class="left" onclick="closeAircraft()">Cancel</span></div>
+<hr class="line">
+	<div class="trip_inner">
+<label class="labeltouch">
+                <input type="checkbox" name="aircraftCheckbox"
+                       value="RJ" checked><span class="airlineimage cab"></span>Regional jet</label>
+                       <hr class="line">
+         <br>  <label class="labeltouch">
+                <input type="checkbox" name="aircraftCheckbox"
+                       value="NBJ" checked><span class="airlineimage cab"></span>Narrow-body jet</label><hr class="line">
+<br>
+            <label class="labeltouch">
+                <input type="checkbox" name="aircraftCheckbox" 
+                       value="WBJ" checked><span class="airlineimage cab"></span>Wide-body jet</label><hr class="line">
+<br>
+           <button class="btn5" onclick="closeAircraft()" style="bottom: 10; position: absolute;margin:auto;width:95%;">Done</button>
+</div>
+</div>
+  <!-- aircraft option ends here-->
+		
+		<div class="adds more">
+		</div>
+		<!-- charges content starts here-->
+	<div class="chargescontent" id="list-of-divs">
+		<div class="charges Jetblue E RJ" data-number="676" data-name="a">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/jetblue.png" alt="jetblue airlines"></span><br>
+				<span class="airline"><img src="image.flight/jetblue.png" alt="jetblue airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">12:00p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:00p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top:30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">8:45p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">7:50p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="676" data-eur="662">$676</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">JetBlue</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">JetBlue Airlines</p>
+				</div>
+		</div>
+		
+		
+		<div class="charges Jetblue E NBJ" data-number="536" data-name="b">
+			<div class="division1">
+				<span class="airline"><img src="image.flight/jetblue.png" alt="jetblue airlines"></span><br>
+				<span class="airline"><img src="image.flight/jetblue.png" alt="jetblue airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">12:00p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:00p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 35px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">8:45p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">7:50p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="536" data-eur="526">$536</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">JetBlue</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">JetBlue Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges American B-E WBJ" data-number="497" data-name="c">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/american.png" alt="american airlines"></span><br>
+				<span class="airline"><img src="image.flight/american.png" alt="american airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="497" data-eur="487">$497</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">American Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges United covid E RJ" data-number="597" data-name="d">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/united.png" alt="united airlines"></span><br>
+				<span class="airline"><img src="image.flight/united.png" alt="united airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="597" data-eur="587">$597</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">United Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges Spirit E RJ" data-number="615" data-name="e">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/spirit.png" alt="spirit airlines"></span><br>
+				<span class="airline"><img src="image.flight/spirit.png" alt="spirit airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">8:02a</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">8:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">4:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">9:10a</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="615" data-eur="603">$615</span><br>
+				<span class="distance">Fare Scan</span>
+				<br>
+				<span class="distance">1 site</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">Spirit Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges United E WBJ" data-number="557" data-name="f">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/united.png" alt="united airlines"></span><br>
+				<span class="airline"><img src="image.flight/united.png" alt="united airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="557" data-eur="546">$557</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">United Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges Alaska B-E WBJ" data-number="497" data-name="h">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/alaska.png" alt="alaska airlines"></span><br>
+				<span class="airline"><img src="image.flight/alaska.png" alt="alaska airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="497" data-eur="488">$497</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">Alaska Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges American E WBJ" data-number="536" data-name="i">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/american.png" alt="american airlines"></span><br>
+				<span class="airline"><img src="image.flight/american.png" alt="american airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="536" data-eur="523">$536</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">American Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges Alaska E WBJ" data-number="537" data-name="g">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/alaska.png" alt="alaska airlines"></span><br>
+				<span class="airline"><img src="image.flight/alaska.png" alt="alaska airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">11:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">5:30p</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="537" data-eur="525">$537</span><br>
+				<span class="distance">Multiple Fares</span>
+				<br>
+				<span class="distance">2 sites</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">Alaska Airlines</p>
+				</div>
+		</div>
+		
+		<div class="charges Spirit covid E NBJ" data-number="515" data-name="j">
+		<div class="division1">
+				<span class="airline"><img src="image.flight/spirit.png" alt="spirit airlines"></span><br>
+				<span class="airline"><img src="image.flight/spirit.png" alt="spirit airlines"></span>
+				</div>
+				
+				<div class="division2">
+					<p class="details1">
+					<span class="thetime">8:02a</span><br>
+				<span class="location">LAX</span>
+				</p>
+				
+				<p class="details1">
+					<span class="thetime">8:55p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				</div>
+				
+				<div class="division3">
+					<p class="distcont" style="margin-top: 30px;">
+					<hr class="line1">
+						<span class="distance">5hr 20m</span></p>
+						
+						<p class="distcont">
+					<hr class="line1">
+						<span class="distance">5hr 46m</span></p>
+				</div>
+				
+				<div class="division2">
+					<p class="details">
+					<span class="thetime">4:30p</span><br>
+				<span class="location">EWR</span>
+				</p>
+				
+				<p class="details">
+					<span class="thetime">9:10a</span><br>
+				<span class="location">LAX</span>
+				</p>
+				</div>
+				<div class="division4">
+					<p class="details4">
+					<span class="price" data-usd="515" data-eur="505">$515</span><br>
+				<span class="distance">Fare Scan</span>
+				<br>
+				<span class="distance">1 site</span>
+				</div>
+		
+			<div class="division5">
+				<hr class="linea">
+					<p class="airlinetype">Spirit Airlines</p>
+				</div>
+		</div>
+		
+	</div>
+	<!-- charges content ends here-->
+		
+		
+	<!-- contact section starts here -->
+	<div class="address">
+		<button class="btn7" style="margin-top: 55px;">United States (English)</button>
+		<button class="btn7" style="margin-top: 15px;" onclick="openCurrency()"><span id="money">$ United States Dollar</span></button>
+		
+		<div class="linkcontainer">
+	<a class="links">Terms and Condition</a>''
+	<a class="links">Flight Tracker</a>
+	<a class="links">About</a>
+	<a class="links">Privacy</a>
+	<a class="links">Help</a>
+	<a class="links">© 2022 Flight</a>
+	</div>
+		
+		<p class="note1">
+			Search cheap flights with WAVES. Search for the cheapest airline tickets for all the top airlines around the world and the top international flight routes. WAVES searches hundreds of travel sites to help you find cheap airfare and book a flight that suits you best. Since WAVES searches many plane tickets sites at once, you can find cheap tickets from cheap airlines quickly.
+</p>
+</div> 
+	<!-- contact section ends here -->
+		
+	</div>
+	 <!-- container ends here-->
+
+
+<script>
+	function openProfile(){
+	var x = document.getElementById("myProfile");
+	x.style.display ="block";
+	}
+	
+	function closeProfile(){
+	var x = document.getElementById("myProfile");
+	x.style.display ="none";
+	}
+	
+	function openEmail(){
+	var x = document.getElementById("myEmail");
+	x.style.display ="block";
+	}
+	
+	function closeEmail(){
+	var x = document.getElementById("myEmail");
+	x.style.display ="none";
+	}
+	
+	function openCurrency(){
+	var x = document.getElementById("myCurrency");
+	x.style.display ="block";
+	}
+	
+	function closeCurrency(){
+	var x = document.getElementById("myCurrency");
+	x.style.display ="none";
+	}
+	
+	function openSort(){
+	var x = document.getElementById("mySort");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeSort(){
+	var x = document.getElementById("mySort");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openFlexOption(){
+	var x = document.getElementById("myFlexOption");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeFlexOption(){
+	var x = document.getElementById("myFlexOption");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openStop(){
+	var x = document.getElementById("myStop");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeStop(){
+	var x = document.getElementById("myStop");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openTimer(){
+	var x = document.getElementById("myTimer");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeTimer(){
+	var x = document.getElementById("myTimer");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openAirport(){
+	var x = document.getElementById("myAirport");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeAirport(){
+	var x = document.getElementById("myAirport");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openBag(){
+	var x = document.getElementById("myBag");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeBag(){
+	var x = document.getElementById("myBag");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openAirline(){
+	var x = document.getElementById("myAirline");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeAirline(){
+	var x = document.getElementById("myAirline");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openDuration(){
+	var x = document.getElementById("myDuration");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeDuration(){
+	var x = document.getElementById("myDuration");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openQuality(){
+	var x = document.getElementById("myQuality");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeQuality(){
+	var x = document.getElementById("myQuality");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openBankSite(){
+	var x = document.getElementById("myBankSite");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeBankSite(){
+	var x = document.getElementById("myBankSite");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openPrice(){
+	var x = document.getElementById("myPrice");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closePrice(){
+	var x = document.getElementById("myPrice");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openCabin(){
+	var x = document.getElementById("myCabin");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeCabin(){
+	var x = document.getElementById("myCabin");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function openAircraft(){
+	var x = document.getElementById("myAircraft");
+	var y = document.getElementById("sep");
+	x.style.display ="block";
+	y.style.display = "block";
+	}
+	
+	function closeAircraft(){
+	var x = document.getElementById("myAircraft");
+	var y = document.getElementById("sep");
+	x.style.display ="none";
+	y.style.display ="none";
+	}
+	
+	function radioSort(el) {
+  var radio_value;
+  radio_value= el.value;
+  var sortChoice = document.getElementById("sortChoice");
+  
+  if (radio_value == "number") {
+  	var divList = $(".charges");
+	divList.sort(function(a, b) {
+	    return parseInt($(b).data('number')) - parseInt($(a).data('number'));
+	});
+	$("#list-of-divs").html(divList);
+	sortChoice.innerText = "best";
+	closeSort();
+  } else if (radio_value == "numbera") {
+  	var divList = $(".charges");
+	divList.sort(function(a, b) {
+	    return parseInt($(a).data('number')) - parseInt($(b).data('number'));
+	});
+	$("#list-of-divs").html(divList);
+	sortChoice.innerText = "cheapest";
+	closeSort();
+  } else if (radio_value== "ascending") {
+	var divList = $(".charges");
+	divList.sort(function(a, b){
+	    return String.prototype.localeCompare.call($(a).data('name').toLowerCase(), $(b).data('name').toLowerCase());
+	});
+	$("#list-of-divs").html(divList);
+	sortChoice.innerText = "fastest";
+	closeSort();
+  } else if (radio_value  == "descending") {
+  	var divList = $(".charges");
+	divList.sort(function(a, b){
+	    return String.prototype.localeCompare.call($(b).data('name').toLowerCase(),$(a).data('name').toLowerCase());
+	});
+	$("#list-of-divs").html(divList);
+	sortChoice.innerText = "earliest";
+	closeSort();
+  }	
+}
+
+$(document).ready(function() {
+                $('input[name="airlineCheckbox"]').click(function() {
+                    var inputValue = $(this).attr("value");
+                    $("." + inputValue).toggle();
+  
+                });
+            });
+           
+            $(function() {
+  $(".curr").on("click",function() {
+    var curr   = this.value;
+    var prefix = curr=="usd"; // or ["usd","yen",...].indexOf(curr); for more
+    var sign   = curr=="usd"?"$":"€";
+    $(".price").each(function(){
+      $(this).text(
+        (prefix?sign:"")   +
+        (prefix?"":sign) +
+        $(this).data(curr) 
+      );
+      closeCurrency();
+    })
+  }).change();
+});
+
+function eurCurrency(){
+	var cash = document.getElementById('money');
+	cash.innerHTML = "€ Euro";
+	}
+	
+	function usdCurrency(){
+	var cash = document.getElementById('money');
+	cash.innerHTML = "$ United States Dollar";
+	}
+
+      $(document).ready(function() {
+                $('input[name="flexOptionCheckbox"]').click(function() {
+                    var inputValue = $(this).attr("value");
+                    $("." + inputValue).toggle();
+                });
+            });
+            
+            $(document).ready(function() {
+                $('input[name="cabinCheckbox"]').click(function() {
+                    var inputValue = $(this).attr("value");
+                    $("." + inputValue).toggle();
+  
+                });
+            });
+            
+            $(document).ready(function() {
+                $('input[name="aircraftCheckbox"]').click(function() {
+                    var inputValue = $(this).attr("value");
+                    $("." + inputValue).toggle();
+  
+                });
+            });
+            
+            const inca = document.getElementById('inca');
+const incb = document.getElementById('incb');
+const deca = document.getElementById('deca');
+const decb = document.getElementById('decb');
+const showa = document.getElementById('showa');
+const showb = document.getElementById('showb');
+const total = document.getElementById('totalbags');
+const showc = document.getElementById('showc');
+var suma = 0;
+var sumb = 0;
+
+inca.onclick = () => {
+	if (suma == 2) {
+	return}
+	suma++
+	showa.innerText = suma
+	}
+	
+	deca.onclick = () => {
+	if (suma == 0) {
+	return}
+	suma--
+	showa.innerText = suma
+	}
+	
+	incb.onclick = () => {
+	if (sumb == 2) {
+	return}
+	sumb++
+	showb.innerText = sumb
+	}
+	
+	decb.onclick = () => {
+	if (sumb == 0) {
+	return}
+	sumb--
+	showb.innerText = sumb
+	}
+	
+	total.onclick = () => {
+	showc.innerText = suma + sumb
+	closeBagNo()
+	}
+</script>
+</body>
+</html>
